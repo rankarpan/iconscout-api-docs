@@ -27,8 +27,328 @@ paths:
                 items:
                   type: object
               examples:
-                Icon Results: {}
-      operationId: ''
+                Icon Results:
+                  value:
+                    status: success
+                    response:
+                      aggregations:
+                        assets:
+                          icons_count: 24517
+                          illustrations_count: 159
+                          photos_count: 26
+                        products:
+                          items_count: 24457
+                          packs_count: 1350
+                        styles:
+                          - id: 2
+                            name: Colored Outline
+                            slug: colored-outline
+                            icon_url: null
+                            count: 4174
+                          - id: 4
+                            name: Doodle
+                            slug: doodle
+                            icon_url: null
+                            count: 155
+                          - id: 9
+                            name: Dualtone
+                            slug: dualtone
+                            icon_url: null
+                            count: 68
+                          - id: 3
+                            name: Flat
+                            slug: flat
+                            icon_url: null
+                            count: 7282
+                          - id: 7
+                            name: Glyph
+                            slug: glyph
+                            icon_url: null
+                            count: 4831
+                          - id: 12
+                            name: Gradient
+                            slug: gradient
+                            icon_url: null
+                            count: 583
+                          - id: 1
+                            name: Isometric
+                            slug: isometric
+                            icon_url: null
+                            count: 129
+                          - id: 5
+                            name: Line
+                            slug: line
+                            icon_url: null
+                            count: 6898
+                          - id: 8
+                            name: Rounded
+                            slug: rounded
+                            icon_url: null
+                            count: 393
+                          - id: 10
+                            name: Sticker
+                            slug: sticker
+                            icon_url: null
+                            count: 5
+                      related_tags: []
+                      items:
+                        current_page: 1
+                        data:
+                          - id: 206664
+                            uuid: 5a454210-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            pack_id: 4807
+                            user_id: 2173
+                            name: Avatar
+                            slug: avatar-249
+                            custom_mockup: false
+                            mockup_preview: false
+                            price: 1
+                            priority: 80
+                            width: 24
+                            height: 24
+                            size: 1074
+                            style_id: 7
+                            license_id: 71
+                            status: active
+                            modified_at: '2017-06-12 22:41:34'
+                            deleted_at: null
+                            liked_by_user: false
+                            _score: 23.668592
+                            is_premium: true
+                            payable_price: 1
+                            licenses:
+                              - id: 71
+                                name: Digital License
+                                description: 'Single End product  - Single sale. Physical production up to 500,000 copies . No Merchandise use.'
+                                link: null
+                                price: 1
+                                payable_price: 1
+                                attribution_required: false
+                                downloaded_by_user: false
+                                is_subscription: false
+                              - id: 72
+                                name: Physical Limited License
+                                description: 'Single End product- Limited sales. Physical production up to 1.5M copies. On Merchandise: up to 2000 units.'
+                                link: null
+                                price: 7
+                                payable_price: 7
+                                attribution_required: false
+                                downloaded_by_user: false
+                                is_subscription: false
+                              - id: 73
+                                name: Physical Unlimited License
+                                description: Single End product - Unlimited sales. Unlimited Physical production.  Unlimited use in Merchandise.
+                                link: null
+                                price: 14
+                                payable_price: 14
+                                attribution_required: false
+                                downloaded_by_user: false
+                                is_subscription: false
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/premium/png-64-thumb/avatar-249-206664.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/premium/png-128-thumb/avatar-249-206664.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/premium/png-256-thumb/avatar-249-206664.png'
+                            contributor:
+                              id: 2173
+                              uuid: e6671315-9d1a-11e8-aa5b-16f546a19484
+                              first_name: Creative
+                              last_name: Stall
+                              company: null
+                              username: creative-stall
+                              description: We are a design studio focused on helping people with ready-made creative digital goods.
+                              designation:
+                                - iconist
+                              created_at: '2017-04-27 14:49:03'
+                              updated_at: '2020-02-11 05:27:05'
+                              deleted_at: null
+                              items_count: 88494
+                              followers_count: 78
+                              sales_count: 24528
+                              name: Creative Stall
+                              urls:
+                                large: 'https://cdn.iconscoutmails.com/profile-photo/large/creative-stall-2173.jpg?w=800&h=800&updated_at=1581398825'
+                                small: 'https://cdn.iconscoutmails.com/profile-photo/large/creative-stall-2173.jpg?w=100&h=100&updated_at=1581398825'
+                                normal: 'https://cdn.iconscoutmails.com/profile-photo/large/creative-stall-2173.jpg?w=400&h=400&updated_at=1581398825'
+                            color_codes:
+                              - decimal_color: 7500402
+                                color_id: 497
+                          - id: 1129443
+                            uuid: a2ed3de0-f2e1-11e8-922b-0242ac140003
+                            asset: icon
+                            pack_id: 23918
+                            user_id: 9045
+                            name: Avatar
+                            slug: avatar-1583
+                            custom_mockup: false
+                            mockup_preview: false
+                            price: 1
+                            priority: 15
+                            width: 66
+                            height: 66
+                            size: 3694
+                            style_id: 3
+                            license_id: 71
+                            status: active
+                            modified_at: '2018-11-27 15:18:53'
+                            deleted_at: null
+                            liked_by_user: false
+                            _score: 23.668592
+                            is_premium: true
+                            payable_price: 1
+                            licenses:
+                              - id: 71
+                                name: Digital License
+                                description: 'Single End product  - Single sale. Physical production up to 500,000 copies . No Merchandise use.'
+                                link: null
+                                price: 1
+                                payable_price: 1
+                                attribution_required: false
+                                downloaded_by_user: false
+                                is_subscription: false
+                              - id: 72
+                                name: Physical Limited License
+                                description: 'Single End product- Limited sales. Physical production up to 1.5M copies. On Merchandise: up to 2000 units.'
+                                link: null
+                                price: 7
+                                payable_price: 7
+                                attribution_required: false
+                                downloaded_by_user: false
+                                is_subscription: false
+                              - id: 73
+                                name: Physical Unlimited License
+                                description: Single End product - Unlimited sales. Unlimited Physical production.  Unlimited use in Merchandise.
+                                link: null
+                                price: 14
+                                payable_price: 14
+                                attribution_required: false
+                                downloaded_by_user: false
+                                is_subscription: false
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/premium/png-64-thumb/avatar-1583-1129443.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/premium/png-128-thumb/avatar-1583-1129443.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/premium/png-256-thumb/avatar-1583-1129443.png'
+                            contributor:
+                              id: 9045
+                              uuid: e70d84f3-9d1a-11e8-aa5b-16f546a19484
+                              first_name: Pro
+                              last_name: Symbols
+                              company: null
+                              username: pro-symbols
+                              description: 'Perfecting the art of visual expression, ProSymbols brings the web to life with meaningful and rich designs.'
+                              designation:
+                                - iconist
+                              created_at: '2017-12-14 18:59:05'
+                              updated_at: '2020-02-11 05:29:48'
+                              deleted_at: null
+                              items_count: 76997
+                              followers_count: 41
+                              sales_count: 20199
+                              name: Pro Symbols
+                              urls:
+                                large: 'https://cdn.iconscoutmails.com/profile-photo/large/pro-symbols-9045.jpg?w=800&h=800&updated_at=1581398988'
+                                small: 'https://cdn.iconscoutmails.com/profile-photo/large/pro-symbols-9045.jpg?w=100&h=100&updated_at=1581398988'
+                                normal: 'https://cdn.iconscoutmails.com/profile-photo/large/pro-symbols-9045.jpg?w=400&h=400&updated_at=1581398988'
+                            color_codes:
+                              - decimal_color: 10784946
+                                color_id: 771
+                          - id: 879841
+                            uuid: 773ff378-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            pack_id: 17459
+                            user_id: 21777
+                            name: Avatar
+                            slug: avatar-1253
+                            custom_mockup: false
+                            mockup_preview: false
+                            price: 0
+                            priority: 10
+                            width: 500
+                            height: 500
+                            size: 349800
+                            style_id: 3
+                            license_id: 71
+                            status: active
+                            modified_at: '2018-06-08 13:15:38'
+                            deleted_at: null
+                            liked_by_user: false
+                            _score: 23.668592
+                            is_premium: false
+                            payable_price: 0
+                            licenses:
+                              - id: 71
+                                name: Digital License
+                                description: 'Single End product  - Single sale. Physical production up to 500,000 copies . No Merchandise use.'
+                                link: null
+                                price: 0
+                                payable_price: 0
+                                attribution_required: false
+                                downloaded_by_user: false
+                                is_subscription: true
+                              - id: 72
+                                name: Physical Limited License
+                                description: 'Single End product- Limited sales. Physical production up to 1.5M copies. On Merchandise: up to 2000 units.'
+                                link: null
+                                price: 7
+                                payable_price: 7
+                                attribution_required: false
+                                downloaded_by_user: false
+                                is_subscription: false
+                              - id: 73
+                                name: Physical Unlimited License
+                                description: Single End product - Unlimited sales. Unlimited Physical production.  Unlimited use in Merchandise.
+                                link: null
+                                price: 14
+                                payable_price: 14
+                                attribution_required: false
+                                downloaded_by_user: false
+                                is_subscription: false
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/avatar-1253-879841.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/avatar-1253-879841.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/avatar-1253-879841.png'
+                              original: 'https://s3.amazonaws.com/cdn.iconscout.com/icon/free/svg/879841.svg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4VMJAKC54WWWCYMY%2F20200305%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200305T094058Z&X-Amz-SignedHeaders=host&X-Amz-Expires=259200&X-Amz-Signature=6bfed1c7802270068cd365e0a0404322cd319b126fc29a3c35016443795e7c90'
+                            contributor:
+                              id: 21777
+                              uuid: e81dfb8e-9d1a-11e8-aa5b-16f546a19484
+                              first_name: Neelpari
+                              last_name: Minimo
+                              company: null
+                              username: minimo
+                              description: "We're passionate about creating free and premium state of the art resources for the creative community. "
+                              designation:
+                                - iconist
+                              created_at: '2018-04-19 22:36:17'
+                              updated_at: '2020-01-13 03:22:42'
+                              deleted_at: null
+                              items_count: 109
+                              followers_count: 16
+                              sales_count: 3298
+                              name: Neelpari Minimo
+                              urls:
+                                large: 'https://cdn.iconscoutmails.com/profile-photo/large/neelpari-minimo-21777.jpg?w=800&h=800&updated_at=1578885762'
+                                small: 'https://cdn.iconscoutmails.com/profile-photo/large/neelpari-minimo-21777.jpg?w=100&h=100&updated_at=1578885762'
+                                normal: 'https://cdn.iconscoutmails.com/profile-photo/large/neelpari-minimo-21777.jpg?w=400&h=400&updated_at=1578885762'
+                            color_codes:
+                              - decimal_color: 16365825
+                                color_id: 1479
+                        first_page_url: 'http://api.iconscout.com/v2/items?query=avatar&product_type=item&asset=icon&per_page=3&page_type=search&sort=relevant&page=1'
+                        from: 1
+                        last_page: 8153
+                        last_page_url: 'http://api.iconscout.com/v2/items?query=avatar&product_type=item&asset=icon&per_page=3&page_type=search&sort=relevant&page=8153'
+                        next_page_url: 'http://api.iconscout.com/v2/items?query=avatar&product_type=item&asset=icon&per_page=3&page_type=search&sort=relevant&page=2'
+                        path: 'http://api.iconscout.com/v2/items'
+                        per_page: 3
+                        prev_page_url: null
+                        to: 3
+                        total: 24457
+                    meta:
+                      total_time: 117.85
+                      db_query_time: 9.91
+                      db_query_count: 6
+                    elements: null
+                    message: null
+      operationId: get-v2-search
       requestBody: {}
       parameters:
         - schema:
@@ -42,6 +362,7 @@ paths:
             type: string
           in: query
           name: query
+          required: true
         - schema:
             type: string
             enum:
@@ -78,6 +399,215 @@ paths:
           name: page
       description: ''
     parameters: []
+  '/v2/items/{slug}':
+    parameters:
+      - schema:
+          type: string
+        name: slug
+        in: path
+        required: true
+    get:
+      summary: This method is used to retrieve the list of all styles in iconscout.
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                Result:
+                  value:
+                    status: success
+                    response:
+                      item:
+                        id: 206664
+                        uuid: 5a454210-9d1b-11e8-aa5b-16f546a19484
+                        asset: icon
+                        raw_item_id: 227750
+                        pack_id: 4807
+                        user_id: 2173
+                        name: Avatar
+                        slug: avatar-249
+                        description: 'Avatar, Person, User'
+                        custom_mockup: false
+                        mockup_preview: false
+                        price: 1
+                        priority: 80
+                        width: 24
+                        height: 24
+                        size: 1074
+                        discount: 0
+                        total_view: 56
+                        likes_count: 0
+                        comments_count: 0
+                        featured: false
+                        featured_at: null
+                        style_id: 7
+                        license_id: 71
+                        status: active
+                        modified_at: '2017-06-12 22:41:34'
+                        deleted_at: null
+                        liked_by_user: false
+                        is_premium: true
+                        payable_price: 1
+                        licenses:
+                          - id: 71
+                            name: Digital License
+                            description: 'Single End product  - Single sale. Physical production up to 500,000 copies . No Merchandise use.'
+                            link: null
+                            price: 1
+                            payable_price: 1
+                            attribution_required: false
+                            downloaded_by_user: false
+                            is_subscription: false
+                          - id: 72
+                            name: Physical Limited License
+                            description: 'Single End product- Limited sales. Physical production up to 1.5M copies. On Merchandise: up to 2000 units.'
+                            link: null
+                            price: 7
+                            payable_price: 7
+                            attribution_required: false
+                            downloaded_by_user: false
+                            is_subscription: false
+                          - id: 73
+                            name: Physical Unlimited License
+                            description: Single End product - Unlimited sales. Unlimited Physical production.  Unlimited use in Merchandise.
+                            link: null
+                            price: 14
+                            payable_price: 14
+                            attribution_required: false
+                            downloaded_by_user: false
+                            is_subscription: false
+                        urls:
+                          png_16: 'https://cdn.iconscoutmails.com/icon/premium/png-16-thumb/avatar-249-206664.png'
+                          png_24: 'https://cdn.iconscoutmails.com/icon/premium/png-24-thumb/avatar-249-206664.png'
+                          png_32: 'https://cdn.iconscoutmails.com/icon/premium/png-32-thumb/avatar-249-206664.png'
+                          png_48: 'https://cdn.iconscoutmails.com/icon/premium/png-48-thumb/avatar-249-206664.png'
+                          png_64: 'https://cdn.iconscoutmails.com/icon/premium/png-64-thumb/avatar-249-206664.png'
+                          png_96: 'https://cdn.iconscoutmails.com/icon/premium/png-96-thumb/avatar-249-206664.png'
+                          png_128: 'https://cdn.iconscoutmails.com/icon/premium/png-128-thumb/avatar-249-206664.png'
+                          png_192: 'https://cdn.iconscoutmails.com/icon/premium/png-192-thumb/avatar-249-206664.png'
+                          png_256: 'https://cdn.iconscoutmails.com/icon/premium/png-256-thumb/avatar-249-206664.png'
+                          png_512: 'https://cdn.iconscoutmails.com/icon/premium/png-512-thumb/avatar-249-206664.png'
+                        has_model_release: false
+                        has_property_release: false
+                        additional_formats: []
+                        additional_camera: []
+                        additional_informations:
+                          stroked: false
+                          background_type: light
+                        pack:
+                          id: 4807
+                          uuid: edcafd9e-9d1a-11e8-aa5b-16f546a19484
+                          name: SEO And Web Optimization Vol 1
+                          slug: seo-and-web-optimization-vol-1
+                          items_count: 50
+                          categories:
+                            - id: 4
+                              category_id: null
+                              name: Business
+                              slug: business
+                            - id: 9
+                              category_id: null
+                              name: 'Design & Development'
+                              slug: design-development
+                            - id: 25
+                              category_id: null
+                              name: 'Seo & Web'
+                              slug: seo-web
+                        contributor:
+                          id: 2173
+                          uuid: e6671315-9d1a-11e8-aa5b-16f546a19484
+                          first_name: Creative
+                          last_name: Stall
+                          company: null
+                          username: creative-stall
+                          description: We are a design studio focused on helping people with ready-made creative digital goods.
+                          designation:
+                            - iconist
+                          created_at: '2017-04-27 14:49:03'
+                          updated_at: '2020-02-11 05:27:05'
+                          deleted_at: null
+                          items_count: 88494
+                          followers_count: 78
+                          sales_count: 24528
+                          followed_by_user: false
+                          name: Creative Stall
+                          urls:
+                            large: 'https://cdn.iconscoutmails.com/profile-photo/large/creative-stall-2173.jpg?w=800&h=800&updated_at=1581398825'
+                            small: 'https://cdn.iconscoutmails.com/profile-photo/large/creative-stall-2173.jpg?w=100&h=100&updated_at=1581398825'
+                            normal: 'https://cdn.iconscoutmails.com/profile-photo/large/creative-stall-2173.jpg?w=400&h=400&updated_at=1581398825'
+                          country:
+                            iso_code: PK
+                            name: Pakistan
+                        tags:
+                          - id: 137
+                            name: avatar
+                            slug: avatar
+                            orderable_id: 1
+                            is_keyword: true
+                          - id: 60
+                            name: person
+                            slug: person
+                            orderable_id: 2
+                            is_keyword: false
+                          - id: 656
+                            name: user
+                            slug: user
+                            orderable_id: 3
+                            is_keyword: false
+                        categories: []
+                        style:
+                          id: 7
+                          name: Glyph
+                          slug: glyph
+                          description: null
+                          created_at: '2016-03-15 07:39:15'
+                        color_codes:
+                          - decimal_color: 7500402
+                            color_id: 497
+                            hexcode: '#727272'
+                            color:
+                              id: 497
+                              name: Dove Gray
+                        formats:
+                          - id: 2
+                            name: svg
+                            mime_type: image/svg+xml
+                          - id: 3
+                            name: png
+                            mime_type: image/png
+                          - id: 4
+                            name: ico
+                            mime_type: image/vnd.microsoft.icon
+                          - id: 5
+                            name: icns
+                            mime_type: image/icns
+                          - id: 6
+                            name: eps
+                            mime_type: application/postscript
+                          - id: 7
+                            name: ai
+                            mime_type: application/postscript
+                    meta:
+                      total_time: 88.85
+                      db_query_time: 15.21
+                      db_query_count: 12
+                    elements: null
+                    message: null
+      operationId: get-v2-items-slug
+      description: ''
+      parameters:
+        - schema:
+            type: string
+            default: application/vnd.api.v2+json
+          in: header
+          name: Accept
+          required: true
+      requestBody: {}
 components:
   schemas: {}
   securitySchemes: {}
