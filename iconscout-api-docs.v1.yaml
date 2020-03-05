@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Iconscout API Docs
+  title: Iconscout API v1.0 Docs
   version: '1.0'
 servers:
   - url: 'https://api.iconscout.com'
