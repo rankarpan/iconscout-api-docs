@@ -1,0 +1,83 @@
+openapi: 3.0.0
+info:
+  title: Iconscout API Docs
+  version: '2.0'
+  description: |-
+    Iconscout is India's First Digital Goods marketplace. We are providing high quality digital assets accessible to everyone. We are bridging the gap between users and designers by connecting them on mutual platform. We are enabling designers to share their work to large audience out there and earn from what they love doing. By doing so, we are able to provide amazing resources to the users and right amount to our designers - our two most important stakeholders.
+
+    Iconscout API provides developers an access to huge collection of graphic resources. Developers are free to utilize our API to develop apps, plugins, extensions and many more.
+
+    Please follow our API docs for integration and do drop us mail in case of any queries.
+servers:
+  - url: 'https://api.iconscout.com'
+paths:
+  v2/search:
+    get:
+      summary: Search
+      tags: []
+      responses:
+        '200':
+          description: OK
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: array
+                uniqueItems: false
+                items:
+                  type: object
+              examples:
+                Icon Results: {}
+      operationId: ''
+      requestBody: {}
+      parameters:
+        - schema:
+            type: string
+            default: application/vnd.api.v2+json
+          in: header
+          name: Accept
+          description: ''
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: query
+        - schema:
+            type: string
+            enum:
+              - item
+              - pack
+            default: item
+          in: query
+          name: product_type
+        - schema:
+            type: string
+            enum:
+              - icon
+              - illustration
+              - photo
+            default: icon
+          in: query
+          name: asset
+        - schema:
+            type: string
+            enum:
+              - premium
+              - free
+          in: query
+          name: price
+        - schema:
+            type: number
+            default: 10
+          in: query
+          name: per_page
+        - schema:
+            type: number
+            default: 1
+          in: query
+          name: page
+      description: ''
+    parameters: []
+components:
+  schemas: {}
+  securitySchemes: {}
