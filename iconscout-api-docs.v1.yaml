@@ -1,0 +1,103 @@
+openapi: 3.0.0
+info:
+  title: Iconscout API Docs
+  version: '1.0'
+servers:
+  - url: 'https://api.iconscout.com'
+paths:
+  /v2/styles:
+    get:
+      summary: List All Styles
+      tags: []
+      responses:
+        '200':
+          description: OK
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+              examples:
+                All Styles:
+                  value:
+                    status: success
+                    response:
+                      styles:
+                        - id: 2
+                          name: Colored Outline
+                          slug: colored-outline
+                          description: null
+                          created_at: '2016-03-15 07:39:15'
+                        - id: 4
+                          name: Doodle
+                          slug: doodle
+                          description: null
+                          created_at: '2016-03-15 07:39:15'
+                        - id: 9
+                          name: Dualtone
+                          slug: dualtone
+                          description: null
+                          created_at: '2018-07-16 03:57:12'
+                        - id: 3
+                          name: Flat
+                          slug: flat
+                          description: null
+                          created_at: '2016-03-15 07:39:15'
+                        - id: 7
+                          name: Glyph
+                          slug: glyph
+                          description: null
+                          created_at: '2016-03-15 07:39:15'
+                        - id: 12
+                          name: Gradient
+                          slug: gradient
+                          description: null
+                          created_at: '2018-07-16 03:57:13'
+                        - id: 1
+                          name: Isometric
+                          slug: isometric
+                          description: null
+                          created_at: '2016-03-15 07:39:15'
+                        - id: 5
+                          name: Line
+                          slug: line
+                          description: null
+                          created_at: '2016-03-15 07:39:15'
+                        - id: 8
+                          name: Rounded
+                          slug: rounded
+                          description: null
+                          created_at: '2018-07-16 03:57:12'
+                        - id: 10
+                          name: Sticker
+                          slug: sticker
+                          description: null
+                          created_at: '2018-07-16 03:57:12'
+                        - id: 11
+                          name: Tile
+                          slug: tile
+                          description: null
+                          created_at: '2018-07-16 03:57:12'
+                    meta:
+                      total_time: 32.77
+                      db_query_time: 4.13
+                      db_query_count: 1
+                    elements: null
+                    message: null
+      operationId: ''
+      requestBody: {}
+      parameters:
+        - schema:
+            type: string
+            default: application/vnd.api.v2+json
+          in: header
+          name: Accept
+          description: ''
+          required: true
+      description: This method is used to retrieve the list of all styles.
+    parameters: []
+components:
+  schemas: {}
+  securitySchemes: {}
