@@ -15,7 +15,7 @@ info:
 servers:
   - url: 'https://api.iconscout.com'
 paths:
-  v2/search:
+  /v2/search:
     get:
       summary: Search
       tags: []
@@ -353,7 +353,6 @@ paths:
                     elements: null
                     message: null
       operationId: get-v2-search
-      requestBody: {}
       parameters:
         - schema:
             type: string
@@ -396,16 +395,19 @@ paths:
           name: page
         - schema:
             type: array
-            enum:
-              - svg
-              - eps
-              - ai
-              - png
-              - jpg
+            items:
+              type: string
+              enum:
+                - svg
+                - eps
+                - ai
+                - png
+                - jpg
             uniqueItems: true
           in: query
-          name: formats
-      description: ''
+          name: formats[]
+          description: ''
+      description: search any assets
     parameters: []
   '/v2/items/{slug}':
     parameters:
@@ -606,9 +608,8 @@ paths:
                     elements: null
                     message: null
       operationId: get-v2-items-slug
-      description: ''
+      description: Get information of particular item
       parameters: []
-      requestBody: {}
   '/v2/items/{uuid}/api-download':
     parameters:
       - schema:
@@ -664,7 +665,7 @@ paths:
                 value:
                   format: svg
         description: Here you need to pass `format` of item to download (available from fetch item api)
-      description: ''
+      description: Get download link of particular item
 components:
   schemas: {}
   securitySchemes: {}
