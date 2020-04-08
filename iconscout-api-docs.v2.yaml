@@ -405,8 +405,23 @@ paths:
                 - jpg
             uniqueItems: true
           in: query
-          name: formats[]
+          name: 'formats[]'
           description: ''
+        - schema:
+            type: string
+            default: relevant
+            enum:
+              - relevant
+              - popular
+              - latest
+              - color
+          in: query
+          name: sort
+        - schema:
+            type: boolean
+            default: 'false'
+          in: query
+          name: quality
       description: search any assets
     parameters: []
   '/v2/items/{slug}':
