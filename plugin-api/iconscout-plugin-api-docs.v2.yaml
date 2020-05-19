@@ -14,12 +14,18 @@ info:
   termsOfService: 'https://iconscout.com/legal/terms-of-use'
 servers:
   - url: 'https://api.iconscout.com'
+tags:
+  - name: Search
+  - name: Items
+  - name: Packs
+  - name: Bundles
+  - name: Collections
 paths:
   /v2/search:
     get:
-      summary: 'Search & Filter'
+      summary: 'Search & Filter API'
       tags:
-        - Search API
+        - Search
       operationId: v2.search
       parameters:
         - schema:
@@ -110,7 +116,7 @@ paths:
         required: true
         description: It can be uuid or slug of item.
     get:
-      summary: Fetch Item
+      summary: Fetch Item API
       operationId: v2.items.show
       description: It gives you detailed information about an item.
       parameters: []
@@ -123,7 +129,7 @@ paths:
                 type: object
                 properties: {}
       tags:
-        - Items API
+        - Items
   '/v2/items/{item}/available-relations':
     parameters:
       - schema:
@@ -133,9 +139,9 @@ paths:
         required: true
         description: It can be uuid or slug of item.
     get:
-      summary: Fetch Available Relations of Item
+      summary: Fetch Available Relations API of Item
       tags:
-        - Items API
+        - Items
       responses:
         '200':
           description: OK
@@ -159,9 +165,9 @@ paths:
         required: true
         description: It can be uuid or slug of item.
     get:
-      summary: Fetch Available Styles of Item
+      summary: Fetch Available Styles API of Item
       tags:
-        - Items API
+        - Items
       responses:
         '200':
           description: OK
@@ -181,9 +187,9 @@ paths:
         required: true
         description: Here you need to pass uuid of item.
     post:
-      summary: Item Download
+      summary: Download API of Item
       tags:
-        - Items API
+        - Items
       operationId: v2.items.api-download
       parameters:
         - schema:
@@ -222,7 +228,7 @@ paths:
         required: true
         description: It can be uuid or slug of pack.
     get:
-      summary: Fetch Pack
+      summary: Fetch Pack API
       operationId: v2.packs.show
       description: It gives you detailed information about an pack.
       parameters: []
@@ -235,7 +241,7 @@ paths:
                 type: object
                 properties: {}
       tags:
-        - Packs API
+        - Packs
   '/v2/packs/{pack}/available-relations':
     parameters:
       - schema:
@@ -245,9 +251,9 @@ paths:
         required: true
         description: It can be uuid or slug of pack.
     get:
-      summary: Fetch Available Relations of Pack
+      summary: Fetch Available Relations API of Pack
       tags:
-        - Packs API
+        - Packs
       responses:
         '200':
           description: OK
@@ -260,7 +266,6 @@ paths:
       description: |-
         It gives you available relations of an pack.
         - contributor
-        - pack
         - bundle
   '/v2/packs/{pack}/available-styles':
     parameters:
@@ -271,9 +276,9 @@ paths:
         required: true
         description: It can be uuid or slug of pack.
     get:
-      summary: Fetch Available Styles of Pack
+      summary: Fetch Available Styles API of Pack
       tags:
-        - Packs API
+        - Packs
       responses:
         '200':
           description: OK
@@ -284,11 +289,34 @@ paths:
                 properties: {}
       operationId: v2.packs.available-styles
       description: It gives you available styles of an pack.
+  '/v2/bundles/{bundle}':
+    parameters:
+      - schema:
+          type: string
+        name: bundle
+        in: path
+        required: true
+        description: It can be uuid or slug of bundle.
+    get:
+      summary: Fetch Bundle API
+      operationId: v2.bundles.show
+      description: It gives you detailed information about an bundle.
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      tags:
+        - Bundles
   /v2/collections:
     get:
-      summary: List of Collections
+      summary: List of Collections API
       tags:
-        - Collections API
+        - Collections
       operationId: v2.collections.index
       description: It gives you a list with the featured collections by our experts available at Iconscout.
       responses:
@@ -308,9 +336,9 @@ paths:
         required: true
         description: It can be uuid or slug of collection.
     get:
-      summary: Fetch Collection
+      summary: Fetch Collection API
       tags:
-        - Collections API
+        - Collections
       operationId: v2.collections.show
       description: It gives you detailed information about the collection.
       responses:
