@@ -15,12 +15,50 @@ info:
 servers:
   - url: 'https://api.iconscout.com'
 tags:
+  - name: Styles
   - name: Search
   - name: Items
   - name: Packs
   - name: Bundles
   - name: Collections
 paths:
+  /v2/styles:
+    get:
+      summary: List of Styles API
+      tags:
+        - Styles
+      operationId: v2.styles.index
+      description: It gives you a list with the styles available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  '/v2/styles/{style}':
+    parameters:
+      - schema:
+          type: string
+        name: style
+        in: path
+        required: true
+        description: Here you need to pass slug of style.
+    get:
+      summary: Fetch Collection API
+      tags:
+        - Styles
+      operationId: v2.styles.show
+      description: It gives you detailed information about the style.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
   /v2/search:
     get:
       summary: 'Search & Filter API'
