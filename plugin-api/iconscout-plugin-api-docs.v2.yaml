@@ -47,7 +47,7 @@ paths:
         required: true
         description: Here you need to pass slug of style.
     get:
-      summary: Fetch Collection API
+      summary: Fetch Style API
       tags:
         - Styles
       operationId: v2.styles.show
@@ -84,7 +84,7 @@ paths:
         required: true
         description: Here you need to pass slug of category.
     get:
-      summary: Fetch Collection API
+      summary: Fetch Category API
       tags:
         - Categories
       operationId: v2.categories.show
