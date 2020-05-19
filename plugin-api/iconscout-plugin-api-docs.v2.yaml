@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: 3.0.3
 info:
   title: Iconscout Plugin API v2.0 Docs
   version: '2.0'
@@ -230,7 +230,7 @@ paths:
     get:
       summary: Fetch Pack API
       operationId: v2.packs.show
-      description: It gives you detailed information about an pack.
+      description: It gives you detailed information about a pack.
       parameters: []
       responses:
         '200':
@@ -264,7 +264,7 @@ paths:
                 properties: {}
       operationId: v2.packs.available-relations
       description: |-
-        It gives you available relations of an pack.
+        It gives you available relations of a pack.
         - contributor
         - bundle
   '/v2/packs/{pack}/available-styles':
@@ -288,7 +288,7 @@ paths:
                 type: object
                 properties: {}
       operationId: v2.packs.available-styles
-      description: It gives you available styles of an pack.
+      description: It gives you available styles of a pack.
   '/v2/bundles/{bundle}':
     parameters:
       - schema:
@@ -300,7 +300,30 @@ paths:
     get:
       summary: Fetch Bundle API
       operationId: v2.bundles.show
-      description: It gives you detailed information about an bundle.
+      description: It gives you detailed information about a bundle.
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      tags:
+        - Bundles
+  '/v2/bundles/{bundle}/follow':
+    parameters:
+      - schema:
+          type: string
+        name: bundle
+        in: path
+        required: true
+        description: It can be uuid or slug of bundle.
+    post:
+      summary: Fetch Bundle API
+      operationId: v2.bundles.follow
+      description: It follow/unfollow a bundle.
       parameters: []
       responses:
         '200':
