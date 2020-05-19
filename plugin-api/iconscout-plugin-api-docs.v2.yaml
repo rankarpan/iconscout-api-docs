@@ -16,6 +16,7 @@ servers:
   - url: 'https://api.iconscout.com'
 tags:
   - name: Styles
+  - name: Categories
   - name: Search
   - name: Items
   - name: Packs
@@ -51,6 +52,43 @@ paths:
         - Styles
       operationId: v2.styles.show
       description: It gives you detailed information about the style.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  /v2/categories:
+    get:
+      summary: List of Categories API
+      tags:
+        - Categories
+      operationId: v2.categories.index
+      description: It gives you a list with the categories available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  '/v2/categories/{category}':
+    parameters:
+      - schema:
+          type: string
+        name: category
+        in: path
+        required: true
+        description: Here you need to pass slug of category.
+    get:
+      summary: Fetch Collection API
+      tags:
+        - Categories
+      operationId: v2.categories.show
+      description: It gives you detailed information about the category.
       responses:
         '200':
           description: OK
