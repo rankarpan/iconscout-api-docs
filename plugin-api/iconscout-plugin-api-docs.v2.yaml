@@ -17,10 +17,10 @@ servers:
 paths:
   /v2/search:
     get:
-      summary: Search
+      summary: 'Search & Filter'
       tags:
-        - search
-      operationId: get-v2-search
+        - Search API
+      operationId: v2.search
       parameters:
         - schema:
             type: string
@@ -111,7 +111,7 @@ paths:
         description: It can be uuid or slug of item.
     get:
       summary: Fetch Item
-      operationId: get-v2-items-slug
+      operationId: v2.items.show
       description: It gives you detailed information about an item.
       parameters: []
       responses:
@@ -123,7 +123,7 @@ paths:
                 type: object
                 properties: {}
       tags:
-        - items
+        - Items API
   '/v2/items/{item}/available-relations':
     parameters:
       - schema:
@@ -133,9 +133,9 @@ paths:
         required: true
         description: It can be uuid or slug of item.
     get:
-      summary: Your GET endpoint
+      summary: Fetch Available Relations of Item
       tags:
-        - items
+        - Items API
       responses:
         '200':
           description: OK
@@ -144,7 +144,7 @@ paths:
               schema:
                 type: object
                 properties: {}
-      operationId: get-v2-items-item-available-relations
+      operationId: v2.items.available-relations
       description: |-
         It gives you available relations of an item.
         - contributor
@@ -159,9 +159,9 @@ paths:
         required: true
         description: It can be uuid or slug of item.
     get:
-      summary: Your GET endpoint
+      summary: Fetch Available Styles of Item
       tags:
-        - items
+        - Items API
       responses:
         '200':
           description: OK
@@ -170,7 +170,7 @@ paths:
               schema:
                 type: object
                 properties: {}
-      operationId: get-v2-items-item-available-styles
+      operationId: v2.items.available-styles
       description: It gives you available styles of an item.
   '/v2/items/{uuid}/api-download':
     parameters:
@@ -183,8 +183,8 @@ paths:
     post:
       summary: Item Download
       tags:
-        - items
-      operationId: post-v2-items-uuid-api-download
+        - Items API
+      operationId: v2.items.api-download
       parameters:
         - schema:
             type: string
@@ -213,12 +213,83 @@ paths:
               schema:
                 type: object
                 properties: {}
+  '/v2/packs/{pack}':
+    parameters:
+      - schema:
+          type: string
+        name: pack
+        in: path
+        required: true
+        description: It can be uuid or slug of pack.
+    get:
+      summary: Fetch Pack
+      operationId: v2.packs.show
+      description: It gives you detailed information about an pack.
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      tags:
+        - Packs API
+  '/v2/packs/{pack}/available-relations':
+    parameters:
+      - schema:
+          type: string
+        name: pack
+        in: path
+        required: true
+        description: It can be uuid or slug of pack.
+    get:
+      summary: Fetch Available Relations of Pack
+      tags:
+        - Packs API
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: v2.packs.available-relations
+      description: |-
+        It gives you available relations of an pack.
+        - contributor
+        - pack
+        - bundle
+  '/v2/packs/{pack}/available-styles':
+    parameters:
+      - schema:
+          type: string
+        name: pack
+        in: path
+        required: true
+        description: It can be uuid or slug of pack.
+    get:
+      summary: Fetch Available Styles of Pack
+      tags:
+        - Packs API
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: v2.packs.available-styles
+      description: It gives you available styles of an pack.
   /v2/collections:
     get:
-      summary: Your GET endpoint
+      summary: List of Collections
       tags:
-        - collections
-      operationId: get-v2-collections
+        - Collections API
+      operationId: v2.collections.index
       description: It gives you a list with the featured collections by our experts available at Iconscout.
       responses:
         '200':
@@ -237,10 +308,10 @@ paths:
         required: true
         description: It can be uuid or slug of collection.
     get:
-      summary: Your GET endpoint
+      summary: Fetch Collection
       tags:
-        - collections
-      operationId: get-v2-collections-slug
+        - Collections API
+      operationId: v2.collections.show
       description: It gives you detailed information about the collection.
       responses:
         '200':
