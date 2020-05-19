@@ -105,6 +105,20 @@ paths:
       operationId: get-v2-items-slug
       description: It gives you detailed information about an item.
       parameters: []
+  '/v2/items/{item}/available-styles':
+    parameters:
+      - schema:
+          type: string
+        name: item
+        in: path
+        required: true
+        description: It can be uuid or slug of item.
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-v2-items-item-available-styles
+      description: It gives you available styles of an item.
   '/v2/items/{uuid}/api-download':
     parameters:
       - schema:
