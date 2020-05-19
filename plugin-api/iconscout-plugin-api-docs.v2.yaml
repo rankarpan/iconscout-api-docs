@@ -18,7 +18,8 @@ paths:
   /v2/search:
     get:
       summary: Search
-      tags: []
+      tags:
+        - search
       operationId: get-v2-search
       parameters:
         - schema:
@@ -110,7 +111,6 @@ paths:
         description: It can be uuid or slug of item.
     get:
       summary: Fetch Item
-      tags: []
       operationId: get-v2-items-slug
       description: It gives you detailed information about an item.
       parameters: []
@@ -122,6 +122,8 @@ paths:
               schema:
                 type: object
                 properties: {}
+      tags:
+        - items
   '/v2/items/{item}/available-relations':
     parameters:
       - schema:
@@ -132,7 +134,8 @@ paths:
         description: It can be uuid or slug of item.
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - items
       responses:
         '200':
           description: OK
@@ -157,7 +160,8 @@ paths:
         description: It can be uuid or slug of item.
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - items
       responses:
         '200':
           description: OK
@@ -178,7 +182,8 @@ paths:
         description: Here you need to pass uuid of item.
     post:
       summary: Item Download
-      tags: []
+      tags:
+        - items
       operationId: post-v2-items-uuid-api-download
       parameters:
         - schema:
@@ -211,7 +216,8 @@ paths:
   /v2/collections:
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - collections
       operationId: get-v2-collections
       description: It gives you a list with the featured collections by our experts available at Iconscout.
       responses:
@@ -232,7 +238,8 @@ paths:
         description: It can be uuid or slug of collection.
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - collections
       operationId: get-v2-collections-slug
       description: It gives you detailed information about the collection.
       responses:
