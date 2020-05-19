@@ -90,6 +90,15 @@ paths:
           in: query
           name: quality
       description: It returns a list with all the assets according to the search.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples: {}
     parameters: []
   '/v2/items/{item}':
     parameters:
@@ -105,20 +114,14 @@ paths:
       operationId: get-v2-items-slug
       description: It gives you detailed information about an item.
       parameters: []
-  '/v2/items/{item}/available-styles':
-    parameters:
-      - schema:
-          type: string
-        name: item
-        in: path
-        required: true
-        description: It can be uuid or slug of item.
-    get:
-      summary: Your GET endpoint
-      tags: []
-      responses: {}
-      operationId: get-v2-items-item-available-styles
-      description: It gives you available styles of an item.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
   '/v2/items/{item}/available-relations':
     parameters:
       - schema:
@@ -130,13 +133,41 @@ paths:
     get:
       summary: Your GET endpoint
       tags: []
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
       operationId: get-v2-items-item-available-relations
       description: |-
         It gives you available relations of an item.
         - contributor
         - pack
         - bundle
+  '/v2/items/{item}/available-styles':
+    parameters:
+      - schema:
+          type: string
+        name: item
+        in: path
+        required: true
+        description: It can be uuid or slug of item.
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: get-v2-items-item-available-styles
+      description: It gives you available styles of an item.
   '/v2/items/{uuid}/api-download':
     parameters:
       - schema:
@@ -169,12 +200,28 @@ paths:
                   format: svg
         description: Here you need to pass `format` of item to download (available from fetch item api)
       description: Get download link of particular item
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
   /v2/collections:
     get:
       summary: Your GET endpoint
       tags: []
       operationId: get-v2-collections
       description: It gives you a list with the featured collections by our experts available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
   '/v2/collections/{collection}':
     parameters:
       - schema:
@@ -188,6 +235,14 @@ paths:
       tags: []
       operationId: get-v2-collections-slug
       description: It gives you detailed information about the collection.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
 components:
   schemas: {}
   securitySchemes: {}
