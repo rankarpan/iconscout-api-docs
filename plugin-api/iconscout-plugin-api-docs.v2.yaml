@@ -540,6 +540,38 @@ paths:
               schema:
                 type: object
                 properties: {}
+  /v2/auth/likes:
+    get:
+      summary: List of User Liked API
+      tags:
+        - Users
+      operationId: v2.auth.likes
+      description: It gives you a list with the user liked available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      parameters: []
+  /v2/auth/downloads:
+    get:
+      summary: List of User Downloaded API
+      tags:
+        - Users
+      operationId: v2.auth.downloads
+      description: It gives you a list with the user downloaded available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      parameters: []
 components:
   schemas: {}
   securitySchemes: {}
