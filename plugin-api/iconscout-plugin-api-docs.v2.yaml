@@ -23,6 +23,7 @@ tags:
   - name: Packs
   - name: Bundles
   - name: Collections
+  - name: Users
 paths:
   /v2/styles:
     get:
@@ -591,6 +592,29 @@ paths:
         - Users
       operationId: v2.auth.downloads
       description: It gives you a list with the user downloaded available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      parameters:
+        - schema:
+            type: string
+            example: 'Bearer {{access_token}}'
+          in: header
+          name: Authorization
+          required: true
+          description: A temporal authentication token is needed to validate the request.
+  /v2/auth/subscriptions:
+    get:
+      summary: List of User Subscriptions API
+      tags:
+        - Users
+      operationId: v2.auth.subscriptions
+      description: It gives you a list with the user subscriptions purchased at Iconscout.
       responses:
         '200':
           description: OK
