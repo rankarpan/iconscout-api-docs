@@ -216,14 +216,17 @@ paths:
           in: query
           name: query
           required: true
+          description: Search query
         - schema:
             type: string
             enum:
               - item
               - pack
+              - bundle
             default: item
           in: query
           name: product_type
+          description: Filter the results by product type.
         - schema:
             type: string
             enum:
@@ -233,6 +236,7 @@ paths:
             default: icon
           in: query
           name: asset
+          description: Filter the results by asset.
         - schema:
             type: string
             enum:
@@ -240,16 +244,19 @@ paths:
               - free
           in: query
           name: price
+          description: Filter the results by price.
         - schema:
             type: number
             default: 10
           in: query
           name: per_page
+          description: Number of max results returned per request.
         - schema:
             type: number
             default: 1
           in: query
           name: page
+          description: Page number
         - schema:
             type: array
             items:
@@ -263,7 +270,7 @@ paths:
             uniqueItems: true
           in: query
           name: 'formats[]'
-          description: ''
+          description: Filter the results by the formats.
         - schema:
             type: string
             default: relevant
@@ -274,11 +281,13 @@ paths:
               - color
           in: query
           name: sort
+          description: 'Sort the results by relevant, popular or latest.'
         - schema:
             type: boolean
             default: 'false'
           in: query
           name: quality
+          description: Filter the results by the quality (pickup by our experts).
       description: It returns a list with all the assets according to the search.
       responses:
         '200':
