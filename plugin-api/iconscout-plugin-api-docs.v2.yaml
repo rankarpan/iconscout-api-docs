@@ -544,7 +544,7 @@ paths:
             application/json:
               schema:
                 type: object
-                properties: {}                
+                properties: {}
       tags:
         - Bundles
   /v2/collections:
@@ -606,6 +606,41 @@ paths:
               schema:
                 type: object
                 properties: {}
+  /v2/auth/access-token:
+    get:
+      summary: Access Token API after Web Login
+      tags:
+        - Authentication
+      operationId: v2.oauth-clients.access-token
+      description: It gives you a access token after web login at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '422':
+          description: Unprocessable Entity (WebDAV)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: token
+          required: true
+          description: It can be token created for web login.
+        - schema:
+            type: string
+          in: query
+          name: client_id
+          required: true
+          description: It can be client-id of application.
   /v2/auth/likes:
     get:
       summary: List of User Liked API
