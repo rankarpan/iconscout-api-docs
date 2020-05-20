@@ -732,7 +732,7 @@ paths:
           required: true
           description: A temporal authentication token is needed to validate the request.
   /v2/auth/followings:
-    post:
+    get:
       summary: Contributors Following API
       tags:
         - Users
@@ -762,7 +762,7 @@ paths:
                 type: object
                 properties: {}
   /v2/auth/bundles/followings:
-    post:
+    get:
       summary: Bundles Following API
       tags:
         - Users
