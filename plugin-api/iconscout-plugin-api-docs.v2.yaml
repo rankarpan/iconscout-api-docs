@@ -23,6 +23,7 @@ tags:
   - name: Packs
   - name: Bundles
   - name: Collections
+  - name: Authentication
   - name: Users
 paths:
   /v2/styles:
@@ -575,6 +576,28 @@ paths:
         - Collections
       operationId: v2.collections.show
       description: It gives you detailed information about the collection.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  '/v2/oauth-clients/{oauth_client}/create-token':
+    parameters:
+      - schema:
+          type: string
+        name: oauth_client
+        in: path
+        required: true
+        description: It can be client-id of application.
+    get:
+      summary: Create Token API for Web Login
+      tags:
+        - Authentication
+      operationId: v2.oauth-clients.create-token
+      description: It gives you a new token for web login at Iconscout.
       responses:
         '200':
           description: OK
