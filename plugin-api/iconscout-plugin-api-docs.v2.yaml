@@ -145,6 +145,8 @@ paths:
             default: popular
           in: query
           name: sort
+      security:
+        - Authorization: []
     parameters: []
   '/v2/contributors/{contributor}':
     parameters:
@@ -168,6 +170,8 @@ paths:
               schema:
                 type: object
                 properties: {}
+      security:
+        - Authorization: []
   '/v2/contributors/{contributor}/follow':
     parameters:
       - schema:
@@ -182,14 +186,7 @@ paths:
         - Contributors
       operationId: v2.contributors.follow
       description: It follow/unfollow a contributor.
-      parameters:
-        - schema:
-            type: string
-            example: 'Bearer {{access_token}}'
-          in: header
-          name: Authorization
-          required: true
-          description: A temporal authentication token is needed to validate the request.
+      parameters: []
       responses:
         '200':
           description: OK
@@ -205,6 +202,8 @@ paths:
               schema:
                 type: object
                 properties: {}
+      security:
+        - Authorization: []
   /v2/search:
     get:
       summary: 'Search & Filter API'
@@ -290,6 +289,8 @@ paths:
                 type: object
                 properties: {}
               examples: {}
+      security:
+        - Authorization: []
     parameters: []
   '/v2/items/{item}':
     parameters:
@@ -314,6 +315,8 @@ paths:
                 properties: {}
       tags:
         - Items
+      security:
+        - Authorization: []
   '/v2/items/{item}/available-relations':
     parameters:
       - schema:
@@ -385,6 +388,8 @@ paths:
                 properties: {}
       tags:
         - Packs
+      security:
+        - Authorization: []
   '/v2/packs/{pack}/available-relations':
     parameters:
       - schema:
@@ -455,6 +460,8 @@ paths:
                 properties: {}
       tags:
         - Bundles
+      security:
+        - Authorization: []
   '/v2/bundles/{bundle}/follow':
     parameters:
       - schema:
@@ -469,14 +476,7 @@ paths:
         - Bundles
       operationId: v2.bundles.follow
       description: It follow/unfollow a bundle.
-      parameters:
-        - schema:
-            type: string
-            example: 'Bearer {{access_token}}'
-          in: header
-          name: Authorization
-          required: true
-          description: A temporal authentication token is needed to validate the request.
+      parameters: []
       responses:
         '200':
           description: OK
@@ -492,6 +492,8 @@ paths:
               schema:
                 type: object
                 properties: {}
+      security:
+        - Authorization: []
   /v2/collections:
     get:
       summary: List of Collections API
@@ -507,6 +509,8 @@ paths:
               schema:
                 type: object
                 properties: {}
+      security:
+        - Authorization: []
   '/v2/collections/{collection}':
     parameters:
       - schema:
@@ -529,6 +533,8 @@ paths:
               schema:
                 type: object
                 properties: {}
+      security:
+        - Authorization: []
   '/v2/oauth-clients/{oauth_client}/create-token':
     parameters:
       - schema:
@@ -608,14 +614,9 @@ paths:
               schema:
                 type: object
                 properties: {}
-      parameters:
-        - schema:
-            type: string
-            example: 'Bearer {{access_token}}'
-          in: header
-          name: Authorization
-          required: true
-          description: A temporal authentication token is needed to validate the request.
+      parameters: []
+      security:
+        - Authorization: []
   /v2/auth/downloads:
     get:
       summary: List of User Downloaded API
@@ -638,14 +639,9 @@ paths:
               schema:
                 type: object
                 properties: {}
-      parameters:
-        - schema:
-            type: string
-            example: 'Bearer {{access_token}}'
-          in: header
-          name: Authorization
-          required: true
-          description: A temporal authentication token is needed to validate the request.
+      parameters: []
+      security:
+        - Authorization: []
   /v2/auth/subscriptions:
     get:
       summary: List of User Subscriptions API
@@ -668,14 +664,9 @@ paths:
               schema:
                 type: object
                 properties: {}
-      parameters:
-        - schema:
-            type: string
-            example: 'Bearer {{access_token}}'
-          in: header
-          name: Authorization
-          required: true
-          description: A temporal authentication token is needed to validate the request.
+      parameters: []
+      security:
+        - Authorization: []
   /v2/auth/followings:
     get:
       summary: Contributors Following API
@@ -683,14 +674,7 @@ paths:
         - Users
       operationId: v2.auth.followings
       description: It gives you a list with the user following contributors available at Iconscout.
-      parameters:
-        - schema:
-            type: string
-            example: 'Bearer {{access_token}}'
-          in: header
-          name: Authorization
-          required: true
-          description: A temporal authentication token is needed to validate the request.
+      parameters: []
       responses:
         '200':
           description: OK
@@ -706,6 +690,8 @@ paths:
               schema:
                 type: object
                 properties: {}
+      security:
+        - Authorization: []
   /v2/auth/bundles/followings:
     get:
       summary: Bundles Following API
@@ -713,14 +699,7 @@ paths:
         - Users
       operationId: v2.auth.bundles.followings
       description: It gives you a list with the user following bundles available at Iconscout.
-      parameters:
-        - schema:
-            type: string
-            example: 'Bearer {{access_token}}'
-          in: header
-          name: Authorization
-          required: true
-          description: A temporal authentication token is needed to validate the request.
+      parameters: []
       responses:
         '200':
           description: OK
@@ -736,6 +715,8 @@ paths:
               schema:
                 type: object
                 properties: {}
+      security:
+        - Authorization: []
   /v2/logout:
     post:
       summary: Logout API
@@ -743,14 +724,7 @@ paths:
         - Users
       operationId: v2.logout
       description: It signs the user out.
-      parameters:
-        - schema:
-            type: string
-            example: 'Bearer {{access_token}}'
-          in: header
-          name: Authorization
-          required: true
-          description: A temporal authentication token is needed to validate the request.
+      parameters: []
       responses:
         '200':
           description: OK
@@ -766,6 +740,13 @@ paths:
               schema:
                 type: object
                 properties: {}
+      security:
+        - Authorization: []
 components:
   schemas: {}
-  securitySchemes: {}
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      bearerFormat: access_token
+      description: An access_token is required to authenticate the endpoint or to access authorized fields.
