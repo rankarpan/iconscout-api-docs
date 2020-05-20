@@ -731,6 +731,66 @@ paths:
           name: Authorization
           required: true
           description: A temporal authentication token is needed to validate the request.
+  /v2/auth/followings:
+    post:
+      summary: Contributors Following API
+      tags:
+        - Users
+      operationId: v2.auth.followings
+      description: It gives you a list with the user following contributors available at Iconscout.
+      parameters:
+        - schema:
+            type: string
+            example: 'Bearer {{access_token}}'
+          in: header
+          name: Authorization
+          required: true
+          description: A temporal authentication token is needed to validate the request.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  /v2/auth/bundles/followings:
+    post:
+      summary: Bundles Following API
+      tags:
+        - Users
+      operationId: v2.auth.bundles.followings
+      description: It gives you a list with the user following bundles available at Iconscout.
+      parameters:
+        - schema:
+            type: string
+            example: 'Bearer {{access_token}}'
+          in: header
+          name: Authorization
+          required: true
+          description: A temporal authentication token is needed to validate the request.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
   /v2/logout:
     post:
       summary: Logout API
