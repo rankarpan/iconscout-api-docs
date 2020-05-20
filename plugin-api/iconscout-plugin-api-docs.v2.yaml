@@ -178,7 +178,14 @@ paths:
       summary: Fetch Contributor API
       operationId: v2.contributors.follow
       description: It follow/unfollow a contributor.
-      parameters: []
+      parameters:
+        - schema:
+            type: string
+            example: 'Bearer {{access_token}}'
+          in: header
+          name: Authorization
+          required: true
+          description: A temporal authentication token is needed to validate the request.
       responses:
         '200':
           description: OK
@@ -367,6 +374,13 @@ paths:
           name: Client-Secret
           required: true
           description: Drop mail on arpan@iconscout.com to get new Client-Secret.
+        - schema:
+            type: string
+            example: 'Bearer {{access_token}}'
+          in: header
+          name: Authorization
+          required: true
+          description: A temporal authentication token is needed to validate the request.
       requestBody:
         content:
           application/json:
@@ -492,7 +506,14 @@ paths:
       summary: Fetch Bundle API
       operationId: v2.bundles.follow
       description: It follow/unfollow a bundle.
-      parameters: []
+      parameters:
+        - schema:
+            type: string
+            example: 'Bearer {{access_token}}'
+          in: header
+          name: Authorization
+          required: true
+          description: A temporal authentication token is needed to validate the request.
       responses:
         '200':
           description: OK
@@ -555,7 +576,14 @@ paths:
               schema:
                 type: object
                 properties: {}
-      parameters: []
+      parameters:
+        - schema:
+            type: string
+            example: 'Bearer {{access_token}}'
+          in: header
+          name: Authorization
+          required: true
+          description: A temporal authentication token is needed to validate the request.
   /v2/auth/downloads:
     get:
       summary: List of User Downloaded API
@@ -571,7 +599,14 @@ paths:
               schema:
                 type: object
                 properties: {}
-      parameters: []
+      parameters:
+        - schema:
+            type: string
+            example: 'Bearer {{access_token}}'
+          in: header
+          name: Authorization
+          required: true
+          description: A temporal authentication token is needed to validate the request.
 components:
   schemas: {}
   securitySchemes: {}
