@@ -116,12 +116,20 @@ paths:
       parameters:
         - schema:
             type: array
+            items:
+              type: string
+              enum:
+                - iconist
+                - photographer
+                - illustrator
             uniqueItems: true
           in: query
           name: 'designations[]'
           description: 'It can be iconist, photographer & illustrator.'
         - schema:
             type: array
+            items:
+              type: string
             uniqueItems: true
           in: query
           name: 'countries[]'
@@ -158,6 +166,29 @@ paths:
               schema:
                 type: object
                 properties: {}
+  '/v2/contributors/{contributor}/follow':
+    parameters:
+      - schema:
+          type: string
+        name: contributor
+        in: path
+        required: true
+        description: It can be uuid or slug of contributor.
+    post:
+      summary: Fetch Contributor API
+      operationId: v2.contributors.follow
+      description: It follow/unfollow a contributor.
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      tags:
+        - Contributors
   /v2/search:
     get:
       summary: 'Search & Filter API'
