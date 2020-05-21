@@ -1,0 +1,620 @@
+openapi: 3.0.3
+info:
+  title: Iconscout Web API v2.0 Docs
+  version: '2.0'
+  description: |-
+    Iconscout is India's First Digital Goods marketplace. We are providing high quality digital assets accessible to everyone. We are bridging the gap between users and designers by connecting them on mutual platform. We are enabling designers to share their work to large audience out there and earn from what they love doing. By doing so, we are able to provide amazing resources to the users and right amount to our designers - our two most important stakeholders.
+
+    Iconscout API provides developers an access to huge collection of graphic resources. Developers are free to utilize our API to develop apps, plugins, extensions and many more.
+
+    Please follow our API docs for integration and do drop us mail in case of any queries.
+  contact:
+    name: Arpan Rank
+    email: arpan@iconscout.com
+  termsOfService: 'https://iconscout.com/legal/terms-of-use'
+servers:
+  - url: 'https://ajax.iconscout.com/api'
+tags:
+  - name: Styles
+  - name: Categories
+  - name: Contributors
+  - name: Search
+  - name: Items
+  - name: Packs
+  - name: Bundles
+  - name: Collections
+  - name: Users
+paths:
+  /v2/styles:
+    get:
+      summary: List of Styles API
+      tags:
+        - Styles
+      operationId: v2.styles.index
+      description: It gives you a list with the styles available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  '/v2/styles/{style}':
+    parameters:
+      - schema:
+          type: string
+        name: style
+        in: path
+        required: true
+        description: Here you need to pass slug of style.
+    get:
+      summary: Fetch Style API
+      tags:
+        - Styles
+      operationId: v2.styles.show
+      description: It gives you detailed information about the style.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  /v2/categories:
+    get:
+      summary: List of Categories API
+      tags:
+        - Categories
+      operationId: v2.categories.index
+      description: It gives you a list with the categories available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  '/v2/categories/{category}':
+    parameters:
+      - schema:
+          type: string
+        name: category
+        in: path
+        required: true
+        description: Here you need to pass slug of category.
+    get:
+      summary: Fetch Category API
+      tags:
+        - Categories
+      operationId: v2.categories.show
+      description: It gives you detailed information about the category.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  /v2/contributors:
+    get:
+      summary: List of Contributors API
+      tags:
+        - Contributors
+      operationId: v2.contributors.index
+      description: It gives you a list with the contributors available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      parameters:
+        - schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - iconist
+                - photographer
+                - illustrator
+            uniqueItems: true
+          in: query
+          name: 'designations[]'
+          description: 'It can be iconist, photographer & illustrator.'
+        - schema:
+            type: array
+            items:
+              type: string
+            uniqueItems: true
+          in: query
+          name: 'countries[]'
+          description: It can be iso_code of any country.
+        - schema:
+            type: string
+            enum:
+              - popular
+              - latest
+              - relevant
+            default: popular
+          in: query
+          name: sort
+    parameters: []
+  '/v2/contributors/{contributor}':
+    parameters:
+      - schema:
+          type: string
+        name: contributor
+        in: path
+        required: true
+        description: Here you need to pass slug of contributor.
+    get:
+      summary: Fetch Contributor API
+      tags:
+        - Contributors
+      operationId: v2.contributors.show
+      description: It gives you detailed information about the contributor.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  '/v2/contributors/{contributor}/follow':
+    parameters:
+      - schema:
+          type: string
+        name: contributor
+        in: path
+        required: true
+        description: It can be uuid or slug of contributor.
+    post:
+      summary: Fetch Contributor API
+      tags:
+        - Contributors
+      operationId: v2.contributors.follow
+      description: It follow/unfollow a contributor.
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  /v2/search:
+    get:
+      summary: 'Search & Filter API'
+      tags:
+        - Search
+      operationId: v2.search
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: query
+          required: true
+          description: Search query
+        - schema:
+            type: string
+            enum:
+              - item
+              - pack
+              - bundle
+            default: item
+          in: query
+          name: product_type
+          description: Filter the results by product type.
+        - schema:
+            type: string
+            enum:
+              - icon
+              - illustration
+              - photo
+            default: icon
+          in: query
+          name: asset
+          description: Filter the results by asset.
+        - schema:
+            type: string
+            enum:
+              - premium
+              - free
+          in: query
+          name: price
+          description: Filter the results by price.
+        - schema:
+            type: number
+            default: 10
+          in: query
+          name: per_page
+          description: Number of max results returned per request.
+        - schema:
+            type: number
+            default: 1
+          in: query
+          name: page
+          description: Page number
+        - schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - svg
+                - eps
+                - ai
+                - png
+                - jpg
+            uniqueItems: true
+          in: query
+          name: 'formats[]'
+          description: Filter the results by the formats.
+        - schema:
+            type: string
+            default: relevant
+            enum:
+              - relevant
+              - popular
+              - latest
+              - color
+          in: query
+          name: sort
+          description: 'Sort the results by relevant, popular or latest.'
+        - schema:
+            type: boolean
+            default: 'false'
+          in: query
+          name: quality
+          description: Filter the results by the quality (pickup by our experts).
+      description: It returns a list with all the assets according to the search.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples: {}
+    parameters: []
+  '/v2/items/{item}':
+    parameters:
+      - schema:
+          type: string
+        name: item
+        in: path
+        required: true
+        description: It can be uuid or slug of item.
+    get:
+      summary: Fetch Item API
+      operationId: v2.items.show
+      description: It gives you detailed information about an item.
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      tags:
+        - Items
+  '/v2/items/{item}/available-relations':
+    parameters:
+      - schema:
+          type: string
+        name: item
+        in: path
+        required: true
+        description: It can be uuid or slug of item.
+    get:
+      summary: Fetch Available Relations API of Item
+      tags:
+        - Items
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: v2.items.available-relations
+      description: |-
+        It gives you available relations of an item.
+        - contributor
+        - pack
+        - bundle
+  '/v2/items/{item}/available-styles':
+    parameters:
+      - schema:
+          type: string
+        name: item
+        in: path
+        required: true
+        description: It can be uuid or slug of item.
+    get:
+      summary: Fetch Available Styles API of Item
+      tags:
+        - Items
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: v2.items.available-styles
+      description: It gives you available styles of an item.
+  '/v2/packs/{pack}':
+    parameters:
+      - schema:
+          type: string
+        name: pack
+        in: path
+        required: true
+        description: It can be uuid or slug of pack.
+    get:
+      summary: Fetch Pack API
+      operationId: v2.packs.show
+      description: It gives you detailed information about a pack.
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      tags:
+        - Packs
+  '/v2/packs/{pack}/available-relations':
+    parameters:
+      - schema:
+          type: string
+        name: pack
+        in: path
+        required: true
+        description: It can be uuid or slug of pack.
+    get:
+      summary: Fetch Available Relations API of Pack
+      tags:
+        - Packs
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: v2.packs.available-relations
+      description: |-
+        It gives you available relations of a pack.
+        - contributor
+        - bundle
+  '/v2/packs/{pack}/available-styles':
+    parameters:
+      - schema:
+          type: string
+        name: pack
+        in: path
+        required: true
+        description: It can be uuid or slug of pack.
+    get:
+      summary: Fetch Available Styles API of Pack
+      tags:
+        - Packs
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: v2.packs.available-styles
+      description: It gives you available styles of a pack.
+  '/v2/bundles/{bundle}':
+    parameters:
+      - schema:
+          type: string
+        name: bundle
+        in: path
+        required: true
+        description: It can be uuid or slug of bundle.
+    get:
+      summary: Fetch Bundle API
+      operationId: v2.bundles.show
+      description: It gives you detailed information about a bundle.
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      tags:
+        - Bundles
+  '/v2/bundles/{bundle}/follow':
+    parameters:
+      - schema:
+          type: string
+        name: bundle
+        in: path
+        required: true
+        description: It can be uuid or slug of bundle.
+    post:
+      summary: Fetch Bundle API
+      tags:
+        - Bundles
+      operationId: v2.bundles.follow
+      description: It follow/unfollow a bundle.
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  /v2/collections:
+    get:
+      summary: List of Collections API
+      tags:
+        - Collections
+      operationId: v2.collections.index
+      description: It gives you a list with the featured collections by our experts available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  '/v2/collections/{collection}':
+    parameters:
+      - schema:
+          type: string
+        name: collection
+        in: path
+        required: true
+        description: It can be uuid or slug of collection.
+    get:
+      summary: Fetch Collection API
+      tags:
+        - Collections
+      operationId: v2.collections.show
+      description: It gives you detailed information about the collection.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+  /v2/auth/likes:
+    get:
+      summary: List of User Liked API
+      tags:
+        - Users
+      operationId: v2.auth.likes
+      description: It gives you a list with the user liked available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      parameters: []
+  /v2/auth/downloads:
+    get:
+      summary: List of User Downloaded API
+      tags:
+        - Users
+      operationId: v2.auth.downloads
+      description: It gives you a list with the user downloaded available at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      parameters: []
+  /v2/auth/subscriptions:
+    get:
+      summary: List of User Subscriptions API
+      tags:
+        - Users
+      operationId: v2.auth.subscriptions
+      description: It gives you a list with the user subscriptions purchased at Iconscout.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      parameters: []
+  /v2/logout:
+    post:
+      summary: Logout API
+      tags:
+        - Users
+      operationId: v2.logout
+      description: It signs the user out.
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+components:
+  schemas: {}
+  securitySchemes: {}
