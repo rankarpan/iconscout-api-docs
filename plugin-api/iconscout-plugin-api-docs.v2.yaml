@@ -447,6 +447,80 @@ paths:
                 properties: {}
       security:
         - Authorization: []
+  '/v2/items/{uuid}/download/comp-image':
+    parameters:
+      - schema:
+          type: string
+        name: uuid
+        in: path
+        required: true
+        description: Here you need to pass uuid of item.
+    post:
+      summary: Comp Image Download API of Item
+      tags:
+        - Items
+      operationId: v2.items.download.comp-image
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              Download Format:
+                value:
+                  source: '{source}'
+                  width: '{width}'
+                  height: '{height}'
+          multipart/form-data:
+            schema:
+              type: object
+              properties: {}
+            examples: {}
+        description: |-
+          > Here you need to pass `source`, `format` & `license_id` of item to download (available from fetch item api)
+
+          ##### source must be from below lists
+          - `web`
+          - `plugin`
+          - `adobe-ilst`
+          - `adobe-phxs`
+          - `adobe-idsn`
+          - `adobe-xd`
+          - `office-word`
+          - `office-powerpoint`
+          - `office-excel`
+          - `sketch`
+          - `gsuite-document`
+          - `gsuite-spreadsheet`
+          - `gsuite-slides`
+          - `desktop-osx`
+          - `desktop-win`
+          - `desktop-linux`
+          - `wordpress`
+          - `figma`
+      description: |-
+        In graphic design and advertising, a comprehensive layout or comprehensive, usually shortened to comp, is the page layout of a proposed design as initially presented by the designer to a client, showing the relative positions of text and illustrations before the final content of those elements has been decided upon.
+
+        This method is used to get comp image URL. The user can download the image. All the image will have Iconscout watermark logo.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      security:
+        - Authorization: []
   '/v2/packs/{pack}':
     parameters:
       - schema:
