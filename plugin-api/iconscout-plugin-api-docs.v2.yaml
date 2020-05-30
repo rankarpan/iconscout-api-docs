@@ -374,6 +374,79 @@ paths:
                 properties: {}
       operationId: v2.items.available-styles
       description: It gives you available styles of an item.
+  '/v2/items/{uuid}/download':
+    parameters:
+      - schema:
+          type: string
+        name: uuid
+        in: path
+        required: true
+        description: Here you need to pass uuid of item.
+    post:
+      summary: Download API of Item
+      tags:
+        - Items
+      operationId: v2.items.download
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              Download Format:
+                value:
+                  source: '{source}'
+                  format: '{format}'
+                  width: '{width}'
+                  height: '{height}'
+                  license_id: '{license_id}'
+          multipart/form-data:
+            schema:
+              type: object
+              properties: {}
+            examples: {}
+        description: |-
+          > Here you need to pass `source`, `format` & `license_id` of item to download (available from fetch item api)
+
+          ##### source must be from below lists
+          - `web`
+          - `plugin`
+          - `adobe-ilst`
+          - `adobe-phxs`
+          - `adobe-idsn`
+          - `adobe-xd`
+          - `office-word`
+          - `office-powerpoint`
+          - `office-excel`
+          - `sketch`
+          - `gsuite-document`
+          - `gsuite-spreadsheet`
+          - `gsuite-slides`
+          - `desktop-osx`
+          - `desktop-win`
+          - `desktop-linux`
+          - `wordpress`
+          - `figma`
+      description: Get download link of particular item
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      security:
+        - Authorization: []
   '/v2/packs/{pack}':
     parameters:
       - schema:
