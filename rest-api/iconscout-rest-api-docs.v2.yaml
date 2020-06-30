@@ -352,7 +352,7 @@ paths:
                       db_query_count: 6
                     elements: null
                     message: null
-      operationId: get-v2-search
+      operationId: v2.search
       parameters:
         - schema:
             type: string
@@ -622,7 +622,7 @@ paths:
                       db_query_count: 12
                     elements: null
                     message: null
-      operationId: get-v2-items-slug
+      operationId: v2.items.show
       description: Get information of particular item
       parameters: []
   '/v2/items/{uuid}/api-download':
@@ -660,7 +660,7 @@ paths:
                       db_query_count: 8
                     elements: null
                     message: null
-      operationId: post-v2-items-uuid-api-download
+      operationId: v2.items.api-download
       parameters:
         - schema:
             type: string
@@ -683,4 +683,11 @@ paths:
       description: Get download link of particular item
 components:
   schemas: {}
-  securitySchemes: {}
+  securitySchemes:
+    Client-ID:
+      name: Client-ID
+      type: apiKey
+      in: header
+      description: The client_id is a public identifier for apps.
+security:
+  - Client-ID: []
