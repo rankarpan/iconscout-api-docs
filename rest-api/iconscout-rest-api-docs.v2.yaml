@@ -422,6 +422,12 @@ paths:
             default: 'false'
           in: query
           name: quality
+        - schema:
+            type: integer
+          in: header
+          name: Client-ID
+          description: The client_id is a public identifier for apps.
+          required: true
       description: search any assets
     parameters: []
   '/v2/items/{slug}':
@@ -624,7 +630,13 @@ paths:
                     message: null
       operationId: v2.items.show
       description: Get information of particular item
-      parameters: []
+      parameters:
+        - schema:
+            type: integer
+          in: header
+          name: Client-ID
+          description: The client_id is a public identifier for apps.
+          required: true
   '/v2/items/{uuid}/api-download':
     parameters:
       - schema:
@@ -669,6 +681,12 @@ paths:
           name: Client-Secret
           required: true
           description: Drop mail on arpan@iconscout.com to get new Client-Secret.
+        - schema:
+            type: integer
+          in: header
+          description: The client_id is a public identifier for apps.
+          name: Client-ID
+          required: true
       requestBody:
         content:
           application/json:
