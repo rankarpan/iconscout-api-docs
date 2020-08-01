@@ -550,6 +550,61 @@ paths:
           name: quality
       description: search any assets
     parameters: []
+  '/v3/items/{uuid}/api-download':
+    parameters:
+      - schema:
+          type: string
+        name: uuid
+        in: path
+        required: true
+    post:
+      summary: Item Download
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                Item Download:
+                  value:
+                    status: success
+                    response:
+                      download:
+                        url: 'https://s3.amazonaws.com/cdn.iconscout.com/icon/free/svg/461593.svg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4VMJAKC54WWWCYMY%2F20200801%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200801T023149Z&X-Amz-SignedHeaders=host&X-Amz-Expires=259200&X-Amz-Signature=18abc131db4e933c53a1954855f6edcd2dfd10645949859fdeb75bd034e83a48'
+                        name: Clock
+                        download_url: 'https://us-central1-iconscout-1539.cloudfunctions.net/download?name=clock&download=1&url=https%3A%2F%2Fs3.amazonaws.com%2Fcdn.iconscout.com%2Ficon%2Ffree%2Fsvg%2F461593.svg%3FX-Amz-Content-Sha256%3DUNSIGNED-PAYLOAD%26X-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIA4VMJAKC54WWWCYMY%252F20200801%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20200801T023149Z%26X-Amz-SignedHeaders%3Dhost%26X-Amz-Expires%3D259200%26X-Amz-Signature%3D18abc131db4e933c53a1954855f6edcd2dfd10645949859fdeb75bd034e83a48'
+                        download_license_uuid: null
+                      message: item.download.success
+                    meta:
+                      total_time: 97.59
+                      db_query_time: 30.01
+                      db_query_count: 8
+                    elements: null
+                    message: null
+      operationId: v3.items.api-download
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Client-Secret
+          required: true
+          description: Drop mail on arpan@iconscout.com to get new Client-Secret.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              Item Download Format:
+                value:
+                  format: svg
+        description: Here you need to pass `format` of item to download (available from fetch item api)
+      description: Get download link of particular item
 components:
   schemas: {}
   securitySchemes:
