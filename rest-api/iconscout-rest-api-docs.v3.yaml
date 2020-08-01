@@ -1,0 +1,562 @@
+openapi: 3.0.0
+info:
+  title: Iconscout API v3.0 Docs
+  version: '3.0'
+  description: |-
+    Iconscout is India's First Digital Goods marketplace. We are providing high quality digital assets accessible to everyone. We are bridging the gap between users and designers by connecting them on mutual platform. We are enabling designers to share their work to large audience out there and earn from what they love doing. By doing so, we are able to provide amazing resources to the users and right amount to our designers - our two most important stakeholders.
+
+    Iconscout API provides developers an access to huge collection of graphic resources. Developers are free to utilize our API to develop apps, plugins, extensions and many more.
+
+    Please follow our API docs for integration and do drop us mail in case of any queries.
+  contact:
+    name: Arpan Rank
+    email: arpan@iconscout.com
+  termsOfService: 'https://iconscout.com/legal/terms-of-use'
+servers:
+  - url: 'https://api.iconscout.com'
+paths:
+  /v3/search:
+    get:
+      summary: Search
+      tags: []
+      responses:
+        '200':
+          description: OK
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: array
+                uniqueItems: false
+                items:
+                  type: object
+              examples:
+                Icon Results:
+                  value:
+                    status: success
+                    response:
+                      items:
+                        current_page: 1
+                        data:
+                          - id: 101173
+                            uuid: 560fb9c7-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Instagram
+                            slug: instagram-34
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/instagram-34-101173.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/instagram-34-101173.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/instagram-34-101173.png'
+                            color_codes:
+                              - decimal_color: 16777215
+                                color_id: 1566
+                          - id: 101172
+                            uuid: 560fb7a3-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Facebook
+                            slug: facebook-45
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/facebook-45-101172.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/facebook-45-101172.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/facebook-45-101172.png'
+                            color_codes:
+                              - decimal_color: 6324676
+                                color_id: 381
+                          - id: 101182
+                            uuid: 560fcdf2-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Youtube
+                            slug: youtube-59
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/youtube-59-101182.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/youtube-59-101182.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/youtube-59-101182.png'
+                            color_codes:
+                              - decimal_color: 14362404
+                                color_id: 1146
+                          - id: 101178
+                            uuid: 560fc501-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Twitter
+                            slug: twitter-37
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/twitter-37-101178.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/twitter-37-101178.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/twitter-37-101178.png'
+                            color_codes:
+                              - decimal_color: 4439535
+                                color_id: 335
+                          - id: 101177
+                            uuid: 560fc2c9-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Snapchat
+                            slug: snapchat-33
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/snapchat-33-101177.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/snapchat-33-101177.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/snapchat-33-101177.png'
+                            color_codes:
+                              - decimal_color: 16562728
+                                color_id: 1385
+                          - id: 227895
+                            uuid: 5b164f27-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Instagram
+                            slug: instagram-71
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/instagram-71-227895.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/instagram-71-227895.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/instagram-71-227895.png'
+                            color_codes: []
+                          - id: 101181
+                            uuid: 560fcbb9-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Whatsapp
+                            slug: whatsapp-29
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/whatsapp-29-101181.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/whatsapp-29-101181.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/whatsapp-29-101181.png'
+                            color_codes:
+                              - decimal_color: 2339200
+                                color_id: 200
+                          - id: 434627
+                            uuid: 639f3d36-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Facebook
+                            slug: facebook-126
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/facebook-126-434627.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/facebook-126-434627.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/facebook-126-434627.png'
+                            color_codes:
+                              - decimal_color: 14818075
+                                color_id: 1146
+                          - id: 434623
+                            uuid: 639f34ce-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Instagram
+                            slug: instagram-101
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/instagram-101-434623.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/instagram-101-434623.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/instagram-101-434623.png'
+                            color_codes:
+                              - decimal_color: 14818075
+                                color_id: 1146
+                          - id: 47379
+                            uuid: 53f2346f-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Instagram
+                            slug: instagram-brand-logo
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/instagram-brand-logo-47379.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/instagram-brand-logo-47379.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/instagram-brand-logo-47379.png'
+                            color_codes:
+                              - decimal_color: 0
+                                color_id: 1
+                        first_page_url: '/v3/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&oauth_client_id=198175844506907&page=1'
+                        from: 1
+                        last_page: 185812
+                        last_page_url: '/v3/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&oauth_client_id=198175844506907&page=185812'
+                        next_page_url: '/v3/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&oauth_client_id=198175844506907&page=2'
+                        path: /v3/search
+                        per_page: 10
+                        prev_page_url: null
+                        to: 10
+                        total: 1858120
+                    meta:
+                      total_time: 357.51
+                      db_query_time: 2.9
+                      db_query_count: 2
+                    elements: null
+                    message: null
+                Photo Results:
+                  value:
+                    status: success
+                    response:
+                      items:
+                        current_page: 1
+                        data:
+                          - id: 1801630
+                            uuid: ad86d940-5a1d-11ea-bb42-0242ac140003
+                            asset: photo
+                            name: Background  wood board tilt angle
+                            slug: background-wood-board-tilt-angle-2141510
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/background-wood-board-tilt-angle-2141510-1801630.jpg'
+                            color_codes:
+                              - decimal_color: 15260628
+                                color_id: 1190
+                          - id: 1801631
+                            uuid: ad86e740-5a1d-11ea-b83a-0242ac140003
+                            asset: photo
+                            name: Background  wood board tilt angle
+                            slug: background-wood-board-tilt-angle-2141511
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/background-wood-board-tilt-angle-2141511-1801631.jpg'
+                            color_codes:
+                              - decimal_color: 11244947
+                                color_id: 849
+                          - id: 1801633
+                            uuid: ad870450-5a1d-11ea-a296-0242ac140003
+                            asset: photo
+                            name: Wooden board background
+                            slug: wooden-board-background-2141513
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/wooden-board-background-2141513-1801633.jpg'
+                            color_codes:
+                              - decimal_color: 11971486
+                                color_id: 903
+                          - id: 1801634
+                            uuid: ad8713a0-5a1d-11ea-828e-0242ac140003
+                            asset: photo
+                            name: Wooden board background
+                            slug: wooden-board-background-2141514
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/wooden-board-background-2141514-1801634.jpg'
+                            color_codes:
+                              - decimal_color: 11707796
+                                color_id: 820
+                          - id: 1801635
+                            uuid: ad872170-5a1d-11ea-88b9-0242ac140003
+                            asset: photo
+                            name: Wooden board background
+                            slug: wooden-board-background-2141515
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/wooden-board-background-2141515-1801635.jpg'
+                            color_codes:
+                              - decimal_color: 11445141
+                                color_id: 820
+                          - id: 1801637
+                            uuid: ad873d60-5a1d-11ea-bf66-0242ac140003
+                            asset: photo
+                            name: Dark wood floor pattern
+                            slug: dark-wood-floor-pattern-2141517
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141517-1801637.jpg'
+                            color_codes:
+                              - decimal_color: 10522755
+                                color_id: 724
+                          - id: 1801639
+                            uuid: ad875920-5a1d-11ea-934e-0242ac140003
+                            asset: photo
+                            name: Dark wood floor pattern
+                            slug: dark-wood-floor-pattern-2141519
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141519-1801639.jpg'
+                            color_codes:
+                              - decimal_color: 8739411
+                                color_id: 564
+                          - id: 1801640
+                            uuid: ad876870-5a1d-11ea-9bdb-0242ac140003
+                            asset: photo
+                            name: Dark wood floor pattern
+                            slug: dark-wood-floor-pattern-2141520
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141520-1801640.jpg'
+                            color_codes:
+                              - decimal_color: 8808020
+                                color_id: 624
+                          - id: 1801641
+                            uuid: ad877690-5a1d-11ea-9625-0242ac140003
+                            asset: photo
+                            name: Dark wood floor pattern
+                            slug: dark-wood-floor-pattern-2141521
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141521-1801641.jpg'
+                            color_codes:
+                              - decimal_color: 9464151
+                                color_id: 699
+                          - id: 1801647
+                            uuid: ad87cb00-5a1d-11ea-958f-0242ac140003
+                            asset: photo
+                            name: Dark wood floor pattern
+                            slug: dark-wood-floor-pattern-2141527
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141527-1801647.jpg'
+                            color_codes:
+                              - decimal_color: 9720880
+                                color_id: 671
+                        first_page_url: '/v3/search?query=%2A&product_type=item&asset=photo&per_page=10&sort=relevant&quality=0&oauth_client_id=198175844506907&page=1'
+                        from: 1
+                        last_page: 13899
+                        last_page_url: '/v3/search?query=%2A&product_type=item&asset=photo&per_page=10&sort=relevant&quality=0&oauth_client_id=198175844506907&page=13899'
+                        next_page_url: '/v3/search?query=%2A&product_type=item&asset=photo&per_page=10&sort=relevant&quality=0&oauth_client_id=198175844506907&page=2'
+                        path: /v3/search
+                        per_page: 10
+                        prev_page_url: null
+                        to: 10
+                        total: 138985
+                    meta:
+                      total_time: 160.84
+                      db_query_time: 8.03
+                      db_query_count: 2
+                    elements: null
+                    message: null
+                Illustration Results:
+                  value:
+                    status: success
+                    response:
+                      items:
+                        current_page: 1
+                        data:
+                          - id: 1499457
+                            uuid: 044c3c90-af71-11e9-9899-0242ac140003
+                            asset: illustration
+                            name: RHOMBUS Wedding Floral Golden Frame
+                            slug: rhombus-wedding-floral-golden-frame-1757780
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/rhombus-wedding-floral-golden-frame-1757780-1499457.png'
+                            color_codes:
+                              - decimal_color: 13035222
+                                color_id: 1003
+                          - id: 1499960
+                            uuid: d0419e40-af95-11e9-8d92-0242ac140003
+                            asset: illustration
+                            name: INTESTINES Medicine Scheme Anatomy Handdraw
+                            slug: intestines-medicine-scheme-anatomy-handdraw-1751978
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/intestines-medicine-scheme-anatomy-handdraw-1751978-1499960.png'
+                            color_codes:
+                              - decimal_color: 16441307
+                                color_id: 1323
+                          - id: 1479599
+                            uuid: 2af145a0-a7a6-11e9-9e1d-0242ac140003
+                            asset: illustration
+                            name: Wedding golden frame with copy space
+                            slug: wedding-golden-frame-with-copy-space-1742896
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/wedding-golden-frame-with-copy-space-1742896-1479599.png'
+                            color_codes:
+                              - decimal_color: 11920095
+                                color_id: 949
+                          - id: 1460154
+                            uuid: 78629b30-9cad-11e9-8431-0242ac140003
+                            asset: illustration
+                            name: BRAIN STRUCTURE Nervous System
+                            slug: brain-structure-nervous-system-1715915
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/brain-structure-nervous-system-1715915-1460154.png'
+                            color_codes:
+                              - decimal_color: 9225276
+                                color_id: 644
+                          - id: 1496408
+                            uuid: 70dcc480-adfe-11e9-8be6-0242ac140003
+                            asset: illustration
+                            name: TROPICAL FRUIT Summer Seamless Pattern
+                            slug: tropical-fruit-summer-seamless-pattern-1758817
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/tropical-fruit-summer-seamless-pattern-1758817-1496408.png'
+                            color_codes:
+                              - decimal_color: 13673914
+                                color_id: 1043
+                          - id: 1499456
+                            uuid: fa6fd600-af70-11e9-a26a-0242ac140003
+                            asset: illustration
+                            name: ROCKET GIRL Cartoon Space Princess
+                            slug: rocket-girl-cartoon-space-princess-1757781
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/rocket-girl-cartoon-space-princess-1757781-1499456.png'
+                            color_codes:
+                              - decimal_color: 9930968
+                                color_id: 629
+                          - id: 1499461
+                            uuid: 66914aa0-af71-11e9-bd60-0242ac140003
+                            asset: illustration
+                            name: RED WHITE Wedding Floral Golden Frame
+                            slug: red-white-wedding-floral-golden-frame-1757778
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/red-white-wedding-floral-golden-frame-1757778-1499461.png'
+                            color_codes:
+                              - decimal_color: 14541530
+                                color_id: 1185
+                          - id: 1458727
+                            uuid: 7f4f34c0-999b-11e9-887f-0242ac140003
+                            asset: illustration
+                            name: BLUE ROSE PATTERN
+                            slug: blue-rose-pattern-1713480
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/blue-rose-pattern-1713480-1458727.png'
+                            color_codes:
+                              - decimal_color: 13691632
+                                color_id: 1091
+                          - id: 1499502
+                            uuid: 202915e0-af73-11e9-a792-0242ac140003
+                            asset: illustration
+                            name: SKY BLUE OWL Felt Sleeping Design
+                            slug: sky-blue-owl-felt-sleeping-design-1757835
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/sky-blue-owl-felt-sleeping-design-1757835-1499502.png'
+                            color_codes:
+                              - decimal_color: 11854835
+                                color_id: 772
+                          - id: 1480081
+                            uuid: cb729bd0-a7b1-11e9-8d19-0242ac140003
+                            asset: illustration
+                            name: Baby and fox with flower wreath
+                            slug: baby-and-fox-with-flower-wreath-1742726
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/baby-and-fox-with-flower-wreath-1742726-1480081.png'
+                            color_codes:
+                              - decimal_color: 15197913
+                                color_id: 1173
+                        first_page_url: '/v3/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&oauth_client_id=198175844506907&page=1'
+                        from: 1
+                        last_page: 1075
+                        last_page_url: '/v3/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&oauth_client_id=198175844506907&page=1075'
+                        next_page_url: '/v3/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&oauth_client_id=198175844506907&page=2'
+                        path: /v3/search
+                        per_page: 10
+                        prev_page_url: null
+                        to: 10
+                        total: 10747
+                    meta:
+                      total_time: 97.9
+                      db_query_time: 2.78
+                      db_query_count: 2
+                    elements: null
+                    message: null
+      operationId: v3.search
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: query
+          required: true
+        - schema:
+            type: string
+            enum:
+              - item
+              - pack
+            default: item
+          in: query
+          name: product_type
+        - schema:
+            type: string
+            enum:
+              - icon
+              - illustration
+              - photo
+            default: icon
+          in: query
+          name: asset
+        - schema:
+            type: string
+            enum:
+              - premium
+              - free
+          in: query
+          name: price
+        - schema:
+            type: number
+            default: 10
+          in: query
+          name: per_page
+        - schema:
+            type: number
+            default: 1
+          in: query
+          name: page
+        - schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - svg
+                - eps
+                - ai
+                - png
+                - jpg
+            uniqueItems: true
+          in: query
+          name: 'formats[]'
+          description: ''
+        - schema:
+            type: string
+            default: relevant
+            enum:
+              - relevant
+              - popular
+              - latest
+              - color
+          in: query
+          name: sort
+        - schema:
+            type: boolean
+            default: 'false'
+          in: query
+          name: quality
+      description: search any assets
+    parameters: []
+components:
+  schemas: {}
+  securitySchemes:
+    Client-ID:
+      name: Client-ID
+      type: apiKey
+      in: header
+      description: The client_id is a public identifier for apps.
+security:
+  - Client-ID: []
