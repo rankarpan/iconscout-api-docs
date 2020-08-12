@@ -11,6 +11,7 @@ info:
   contact:
     name: Arpan Rank
     email: arpan@iconscout.com
+    url: 'https://iconscout.com/developers'
   termsOfService: 'https://iconscout.com/legal/api-license-development-agreement'
 servers:
   - url: 'https://api.iconscout.com'
