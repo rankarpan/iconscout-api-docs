@@ -571,7 +571,7 @@ paths:
           description: Only applicable when asset filter is icon.
       description: |-
         Search for icons, illustrations or photos by query string and filter parameters.
-        If you need any type of special search filter (i.e category filter like user interface) then let us know.
+        If you need any type of special search filter (i.e category filter like user-interface or designer filter like iconscout) then let us know.
     parameters: []
   '/v3/items/{uuid}/api-download':
     parameters:
