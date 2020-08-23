@@ -9,17 +9,22 @@ info:
 
     Please follow our API docs for integration and do drop us mail in case of any queries.
   contact:
-    name: Arpan Rank
-    email: arpan@iconscout.com
+    name: Iconscout API
+    email: api@iconscout.com
     url: 'https://iconscout.com/developers'
   termsOfService: 'https://iconscout.com/legal/api-license-development-agreement'
 servers:
   - url: 'https://api.iconscout.com'
+    description: Iconscout API
+tags:
+  - name: Search
+  - name: Download
 paths:
   /v2/search:
     get:
       summary: Search
-      tags: []
+      tags:
+        - Search
       responses:
         '200':
           description: OK
@@ -36,327 +41,454 @@ paths:
                   value:
                     status: success
                     response:
-                      aggregations:
-                        assets:
-                          icons_count: 24517
-                          illustrations_count: 159
-                          photos_count: 26
-                        products:
-                          items_count: 24457
-                          packs_count: 1350
-                        styles:
-                          - id: 2
-                            name: Colored Outline
-                            slug: colored-outline
-                            icon_url: null
-                            count: 4174
-                          - id: 4
-                            name: Doodle
-                            slug: doodle
-                            icon_url: null
-                            count: 155
-                          - id: 9
-                            name: Dualtone
-                            slug: dualtone
-                            icon_url: null
-                            count: 68
-                          - id: 3
-                            name: Flat
-                            slug: flat
-                            icon_url: null
-                            count: 7282
-                          - id: 7
-                            name: Glyph
-                            slug: glyph
-                            icon_url: null
-                            count: 4831
-                          - id: 12
-                            name: Gradient
-                            slug: gradient
-                            icon_url: null
-                            count: 583
-                          - id: 1
-                            name: Isometric
-                            slug: isometric
-                            icon_url: null
-                            count: 129
-                          - id: 5
-                            name: Line
-                            slug: line
-                            icon_url: null
-                            count: 6898
-                          - id: 8
-                            name: Rounded
-                            slug: rounded
-                            icon_url: null
-                            count: 393
-                          - id: 10
-                            name: Sticker
-                            slug: sticker
-                            icon_url: null
-                            count: 5
-                      related_tags: []
                       items:
                         current_page: 1
                         data:
-                          - id: 206664
-                            uuid: 5a454210-9d1b-11e8-aa5b-16f546a19484
+                          - id: 101173
+                            uuid: 560fb9c7-9d1b-11e8-aa5b-16f546a19484
                             asset: icon
-                            pack_id: 4807
-                            user_id: 2173
-                            name: Avatar
-                            slug: avatar-249
-                            custom_mockup: false
-                            mockup_preview: false
-                            price: 1
-                            priority: 80
-                            width: 24
-                            height: 24
-                            size: 1074
-                            style_id: 7
-                            license_id: 71
-                            status: active
-                            modified_at: '2017-06-12 22:41:34'
-                            deleted_at: null
-                            liked_by_user: false
-                            _score: 23.668592
-                            is_premium: true
-                            payable_price: 1
-                            licenses:
-                              - id: 71
-                                name: Digital License
-                                description: 'Single End product  - Single sale. Physical production up to 500,000 copies . No Merchandise use.'
-                                link: null
-                                price: 1
-                                payable_price: 1
-                                attribution_required: false
-                                downloaded_by_user: false
-                                is_subscription: false
-                              - id: 72
-                                name: Physical Limited License
-                                description: 'Single End product- Limited sales. Physical production up to 1.5M copies. On Merchandise: up to 2000 units.'
-                                link: null
-                                price: 7
-                                payable_price: 7
-                                attribution_required: false
-                                downloaded_by_user: false
-                                is_subscription: false
-                              - id: 73
-                                name: Physical Unlimited License
-                                description: Single End product - Unlimited sales. Unlimited Physical production.  Unlimited use in Merchandise.
-                                link: null
-                                price: 14
-                                payable_price: 14
-                                attribution_required: false
-                                downloaded_by_user: false
-                                is_subscription: false
-                            urls:
-                              png_64: 'https://cdn.iconscoutmails.com/icon/premium/png-64-thumb/avatar-249-206664.png'
-                              png_128: 'https://cdn.iconscoutmails.com/icon/premium/png-128-thumb/avatar-249-206664.png'
-                              png_256: 'https://cdn.iconscoutmails.com/icon/premium/png-256-thumb/avatar-249-206664.png'
-                            contributor:
-                              id: 2173
-                              uuid: e6671315-9d1a-11e8-aa5b-16f546a19484
-                              first_name: Creative
-                              last_name: Stall
-                              company: null
-                              username: creative-stall
-                              description: We are a design studio focused on helping people with ready-made creative digital goods.
-                              designation:
-                                - iconist
-                              created_at: '2017-04-27 14:49:03'
-                              updated_at: '2020-02-11 05:27:05'
-                              deleted_at: null
-                              items_count: 88494
-                              followers_count: 78
-                              sales_count: 24528
-                              name: Creative Stall
-                              urls:
-                                large: 'https://cdn.iconscoutmails.com/profile-photo/large/creative-stall-2173.jpg?w=800&h=800&updated_at=1581398825'
-                                small: 'https://cdn.iconscoutmails.com/profile-photo/large/creative-stall-2173.jpg?w=100&h=100&updated_at=1581398825'
-                                normal: 'https://cdn.iconscoutmails.com/profile-photo/large/creative-stall-2173.jpg?w=400&h=400&updated_at=1581398825'
-                            color_codes:
-                              - decimal_color: 7500402
-                                color_id: 497
-                          - id: 1129443
-                            uuid: a2ed3de0-f2e1-11e8-922b-0242ac140003
-                            asset: icon
-                            pack_id: 23918
-                            user_id: 9045
-                            name: Avatar
-                            slug: avatar-1583
-                            custom_mockup: false
-                            mockup_preview: false
-                            price: 1
-                            priority: 15
-                            width: 66
-                            height: 66
-                            size: 3694
-                            style_id: 3
-                            license_id: 71
-                            status: active
-                            modified_at: '2018-11-27 15:18:53'
-                            deleted_at: null
-                            liked_by_user: false
-                            _score: 23.668592
-                            is_premium: true
-                            payable_price: 1
-                            licenses:
-                              - id: 71
-                                name: Digital License
-                                description: 'Single End product  - Single sale. Physical production up to 500,000 copies . No Merchandise use.'
-                                link: null
-                                price: 1
-                                payable_price: 1
-                                attribution_required: false
-                                downloaded_by_user: false
-                                is_subscription: false
-                              - id: 72
-                                name: Physical Limited License
-                                description: 'Single End product- Limited sales. Physical production up to 1.5M copies. On Merchandise: up to 2000 units.'
-                                link: null
-                                price: 7
-                                payable_price: 7
-                                attribution_required: false
-                                downloaded_by_user: false
-                                is_subscription: false
-                              - id: 73
-                                name: Physical Unlimited License
-                                description: Single End product - Unlimited sales. Unlimited Physical production.  Unlimited use in Merchandise.
-                                link: null
-                                price: 14
-                                payable_price: 14
-                                attribution_required: false
-                                downloaded_by_user: false
-                                is_subscription: false
-                            urls:
-                              png_64: 'https://cdn.iconscoutmails.com/icon/premium/png-64-thumb/avatar-1583-1129443.png'
-                              png_128: 'https://cdn.iconscoutmails.com/icon/premium/png-128-thumb/avatar-1583-1129443.png'
-                              png_256: 'https://cdn.iconscoutmails.com/icon/premium/png-256-thumb/avatar-1583-1129443.png'
-                            contributor:
-                              id: 9045
-                              uuid: e70d84f3-9d1a-11e8-aa5b-16f546a19484
-                              first_name: Pro
-                              last_name: Symbols
-                              company: null
-                              username: pro-symbols
-                              description: 'Perfecting the art of visual expression, ProSymbols brings the web to life with meaningful and rich designs.'
-                              designation:
-                                - iconist
-                              created_at: '2017-12-14 18:59:05'
-                              updated_at: '2020-02-11 05:29:48'
-                              deleted_at: null
-                              items_count: 76997
-                              followers_count: 41
-                              sales_count: 20199
-                              name: Pro Symbols
-                              urls:
-                                large: 'https://cdn.iconscoutmails.com/profile-photo/large/pro-symbols-9045.jpg?w=800&h=800&updated_at=1581398988'
-                                small: 'https://cdn.iconscoutmails.com/profile-photo/large/pro-symbols-9045.jpg?w=100&h=100&updated_at=1581398988'
-                                normal: 'https://cdn.iconscoutmails.com/profile-photo/large/pro-symbols-9045.jpg?w=400&h=400&updated_at=1581398988'
-                            color_codes:
-                              - decimal_color: 10784946
-                                color_id: 771
-                          - id: 879841
-                            uuid: 773ff378-9d1b-11e8-aa5b-16f546a19484
-                            asset: icon
-                            pack_id: 17459
-                            user_id: 21777
-                            name: Avatar
-                            slug: avatar-1253
-                            custom_mockup: false
-                            mockup_preview: false
+                            name: Instagram
+                            slug: instagram-34
                             price: 0
-                            priority: 10
-                            width: 500
-                            height: 500
-                            size: 349800
-                            style_id: 3
-                            license_id: 71
-                            status: active
-                            modified_at: '2018-06-08 13:15:38'
-                            deleted_at: null
-                            liked_by_user: false
-                            _score: 23.668592
-                            is_premium: false
-                            payable_price: 0
-                            licenses:
-                              - id: 71
-                                name: Digital License
-                                description: 'Single End product  - Single sale. Physical production up to 500,000 copies . No Merchandise use.'
-                                link: null
-                                price: 0
-                                payable_price: 0
-                                attribution_required: false
-                                downloaded_by_user: false
-                                is_subscription: true
-                              - id: 72
-                                name: Physical Limited License
-                                description: 'Single End product- Limited sales. Physical production up to 1.5M copies. On Merchandise: up to 2000 units.'
-                                link: null
-                                price: 7
-                                payable_price: 7
-                                attribution_required: false
-                                downloaded_by_user: false
-                                is_subscription: false
-                              - id: 73
-                                name: Physical Unlimited License
-                                description: Single End product - Unlimited sales. Unlimited Physical production.  Unlimited use in Merchandise.
-                                link: null
-                                price: 14
-                                payable_price: 14
-                                attribution_required: false
-                                downloaded_by_user: false
-                                is_subscription: false
+                            _score: 1
                             urls:
-                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/avatar-1253-879841.png'
-                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/avatar-1253-879841.png'
-                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/avatar-1253-879841.png'
-                              original: 'https://s3.amazonaws.com/cdn.iconscout.com/icon/free/svg/879841.svg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4VMJAKC54WWWCYMY%2F20200305%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200305T094058Z&X-Amz-SignedHeaders=host&X-Amz-Expires=259200&X-Amz-Signature=6bfed1c7802270068cd365e0a0404322cd319b126fc29a3c35016443795e7c90'
-                            contributor:
-                              id: 21777
-                              uuid: e81dfb8e-9d1a-11e8-aa5b-16f546a19484
-                              first_name: Neelpari
-                              last_name: Minimo
-                              company: null
-                              username: minimo
-                              description: "We're passionate about creating free and premium state of the art resources for the creative community. "
-                              designation:
-                                - iconist
-                              created_at: '2018-04-19 22:36:17'
-                              updated_at: '2020-01-13 03:22:42'
-                              deleted_at: null
-                              items_count: 109
-                              followers_count: 16
-                              sales_count: 3298
-                              name: Neelpari Minimo
-                              urls:
-                                large: 'https://cdn.iconscoutmails.com/profile-photo/large/neelpari-minimo-21777.jpg?w=800&h=800&updated_at=1578885762'
-                                small: 'https://cdn.iconscoutmails.com/profile-photo/large/neelpari-minimo-21777.jpg?w=100&h=100&updated_at=1578885762'
-                                normal: 'https://cdn.iconscoutmails.com/profile-photo/large/neelpari-minimo-21777.jpg?w=400&h=400&updated_at=1578885762'
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/instagram-34-101173.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/instagram-34-101173.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/instagram-34-101173.png'
                             color_codes:
-                              - decimal_color: 16365825
-                                color_id: 1479
-                        first_page_url: 'http://api.iconscout.com/v2/items?query=avatar&product_type=item&asset=icon&per_page=3&page_type=search&sort=relevant&page=1'
+                              - decimal_color: 16777215
+                                color_id: 1566
+                          - id: 101172
+                            uuid: 560fb7a3-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Facebook
+                            slug: facebook-45
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/facebook-45-101172.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/facebook-45-101172.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/facebook-45-101172.png'
+                            color_codes:
+                              - decimal_color: 6324676
+                                color_id: 381
+                          - id: 101182
+                            uuid: 560fcdf2-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Youtube
+                            slug: youtube-59
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/youtube-59-101182.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/youtube-59-101182.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/youtube-59-101182.png'
+                            color_codes:
+                              - decimal_color: 14362404
+                                color_id: 1146
+                          - id: 101178
+                            uuid: 560fc501-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Twitter
+                            slug: twitter-37
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/twitter-37-101178.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/twitter-37-101178.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/twitter-37-101178.png'
+                            color_codes:
+                              - decimal_color: 4439535
+                                color_id: 335
+                          - id: 101177
+                            uuid: 560fc2c9-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Snapchat
+                            slug: snapchat-33
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/snapchat-33-101177.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/snapchat-33-101177.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/snapchat-33-101177.png'
+                            color_codes:
+                              - decimal_color: 16562728
+                                color_id: 1385
+                          - id: 227895
+                            uuid: 5b164f27-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Instagram
+                            slug: instagram-71
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/instagram-71-227895.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/instagram-71-227895.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/instagram-71-227895.png'
+                            color_codes: []
+                          - id: 101181
+                            uuid: 560fcbb9-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Whatsapp
+                            slug: whatsapp-29
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/whatsapp-29-101181.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/whatsapp-29-101181.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/whatsapp-29-101181.png'
+                            color_codes:
+                              - decimal_color: 2339200
+                                color_id: 200
+                          - id: 434627
+                            uuid: 639f3d36-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Facebook
+                            slug: facebook-126
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/facebook-126-434627.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/facebook-126-434627.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/facebook-126-434627.png'
+                            color_codes:
+                              - decimal_color: 14818075
+                                color_id: 1146
+                          - id: 434623
+                            uuid: 639f34ce-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Instagram
+                            slug: instagram-101
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/instagram-101-434623.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/instagram-101-434623.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/instagram-101-434623.png'
+                            color_codes:
+                              - decimal_color: 14818075
+                                color_id: 1146
+                          - id: 47379
+                            uuid: 53f2346f-9d1b-11e8-aa5b-16f546a19484
+                            asset: icon
+                            name: Instagram
+                            slug: instagram-brand-logo
+                            price: 0
+                            _score: 1
+                            urls:
+                              png_64: 'https://cdn.iconscoutmails.com/icon/free/png-64/instagram-brand-logo-47379.png'
+                              png_128: 'https://cdn.iconscoutmails.com/icon/free/png-128/instagram-brand-logo-47379.png'
+                              png_256: 'https://cdn.iconscoutmails.com/icon/free/png-256/instagram-brand-logo-47379.png'
+                            color_codes:
+                              - decimal_color: 0
+                                color_id: 1
+                        first_page_url: '/v2/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&page=1'
                         from: 1
-                        last_page: 8153
-                        last_page_url: 'http://api.iconscout.com/v2/items?query=avatar&product_type=item&asset=icon&per_page=3&page_type=search&sort=relevant&page=8153'
-                        next_page_url: 'http://api.iconscout.com/v2/items?query=avatar&product_type=item&asset=icon&per_page=3&page_type=search&sort=relevant&page=2'
-                        path: 'http://api.iconscout.com/v2/items'
-                        per_page: 3
+                        last_page: 185812
+                        last_page_url: '/v2/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&page=185812'
+                        next_page_url: '/v2/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&page=2'
+                        path: /v2/search
+                        per_page: 10
                         prev_page_url: null
-                        to: 3
-                        total: 24457
+                        to: 10
+                        total: 1858120
                     meta:
-                      total_time: 117.85
-                      db_query_time: 9.91
-                      db_query_count: 6
+                      total_time: 357.51
+                      db_query_time: 2.9
+                      db_query_count: 2
+                    elements: null
+                    message: null
+                Photo Results:
+                  value:
+                    status: success
+                    response:
+                      items:
+                        current_page: 1
+                        data:
+                          - id: 1801630
+                            uuid: ad86d940-5a1d-11ea-bb42-0242ac140003
+                            asset: photo
+                            name: Background  wood board tilt angle
+                            slug: background-wood-board-tilt-angle-2141510
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/background-wood-board-tilt-angle-2141510-1801630.jpg'
+                            color_codes:
+                              - decimal_color: 15260628
+                                color_id: 1190
+                          - id: 1801631
+                            uuid: ad86e740-5a1d-11ea-b83a-0242ac140003
+                            asset: photo
+                            name: Background  wood board tilt angle
+                            slug: background-wood-board-tilt-angle-2141511
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/background-wood-board-tilt-angle-2141511-1801631.jpg'
+                            color_codes:
+                              - decimal_color: 11244947
+                                color_id: 849
+                          - id: 1801633
+                            uuid: ad870450-5a1d-11ea-a296-0242ac140003
+                            asset: photo
+                            name: Wooden board background
+                            slug: wooden-board-background-2141513
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/wooden-board-background-2141513-1801633.jpg'
+                            color_codes:
+                              - decimal_color: 11971486
+                                color_id: 903
+                          - id: 1801634
+                            uuid: ad8713a0-5a1d-11ea-828e-0242ac140003
+                            asset: photo
+                            name: Wooden board background
+                            slug: wooden-board-background-2141514
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/wooden-board-background-2141514-1801634.jpg'
+                            color_codes:
+                              - decimal_color: 11707796
+                                color_id: 820
+                          - id: 1801635
+                            uuid: ad872170-5a1d-11ea-88b9-0242ac140003
+                            asset: photo
+                            name: Wooden board background
+                            slug: wooden-board-background-2141515
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/wooden-board-background-2141515-1801635.jpg'
+                            color_codes:
+                              - decimal_color: 11445141
+                                color_id: 820
+                          - id: 1801637
+                            uuid: ad873d60-5a1d-11ea-bf66-0242ac140003
+                            asset: photo
+                            name: Dark wood floor pattern
+                            slug: dark-wood-floor-pattern-2141517
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141517-1801637.jpg'
+                            color_codes:
+                              - decimal_color: 10522755
+                                color_id: 724
+                          - id: 1801639
+                            uuid: ad875920-5a1d-11ea-934e-0242ac140003
+                            asset: photo
+                            name: Dark wood floor pattern
+                            slug: dark-wood-floor-pattern-2141519
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141519-1801639.jpg'
+                            color_codes:
+                              - decimal_color: 8739411
+                                color_id: 564
+                          - id: 1801640
+                            uuid: ad876870-5a1d-11ea-9bdb-0242ac140003
+                            asset: photo
+                            name: Dark wood floor pattern
+                            slug: dark-wood-floor-pattern-2141520
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141520-1801640.jpg'
+                            color_codes:
+                              - decimal_color: 8808020
+                                color_id: 624
+                          - id: 1801641
+                            uuid: ad877690-5a1d-11ea-9625-0242ac140003
+                            asset: photo
+                            name: Dark wood floor pattern
+                            slug: dark-wood-floor-pattern-2141521
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141521-1801641.jpg'
+                            color_codes:
+                              - decimal_color: 9464151
+                                color_id: 699
+                          - id: 1801647
+                            uuid: ad87cb00-5a1d-11ea-958f-0242ac140003
+                            asset: photo
+                            name: Dark wood floor pattern
+                            slug: dark-wood-floor-pattern-2141527
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141527-1801647.jpg'
+                            color_codes:
+                              - decimal_color: 9720880
+                                color_id: 671
+                        first_page_url: '/v2/search?query=%2A&product_type=item&asset=photo&per_page=10&sort=relevant&quality=0&page=1'
+                        from: 1
+                        last_page: 13899
+                        last_page_url: '/v2/search?query=%2A&product_type=item&asset=photo&per_page=10&sort=relevant&quality=0&page=13899'
+                        next_page_url: '/v2/search?query=%2A&product_type=item&asset=photo&per_page=10&sort=relevant&quality=0&page=2'
+                        path: /v2/search
+                        per_page: 10
+                        prev_page_url: null
+                        to: 10
+                        total: 138985
+                    meta:
+                      total_time: 160.84
+                      db_query_time: 8.03
+                      db_query_count: 2
+                    elements: null
+                    message: null
+                Illustration Results:
+                  value:
+                    status: success
+                    response:
+                      items:
+                        current_page: 1
+                        data:
+                          - id: 1499457
+                            uuid: 044c3c90-af71-11e9-9899-0242ac140003
+                            asset: illustration
+                            name: RHOMBUS Wedding Floral Golden Frame
+                            slug: rhombus-wedding-floral-golden-frame-1757780
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/rhombus-wedding-floral-golden-frame-1757780-1499457.png'
+                            color_codes:
+                              - decimal_color: 13035222
+                                color_id: 1003
+                          - id: 1499960
+                            uuid: d0419e40-af95-11e9-8d92-0242ac140003
+                            asset: illustration
+                            name: INTESTINES Medicine Scheme Anatomy Handdraw
+                            slug: intestines-medicine-scheme-anatomy-handdraw-1751978
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/intestines-medicine-scheme-anatomy-handdraw-1751978-1499960.png'
+                            color_codes:
+                              - decimal_color: 16441307
+                                color_id: 1323
+                          - id: 1479599
+                            uuid: 2af145a0-a7a6-11e9-9e1d-0242ac140003
+                            asset: illustration
+                            name: Wedding golden frame with copy space
+                            slug: wedding-golden-frame-with-copy-space-1742896
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/wedding-golden-frame-with-copy-space-1742896-1479599.png'
+                            color_codes:
+                              - decimal_color: 11920095
+                                color_id: 949
+                          - id: 1460154
+                            uuid: 78629b30-9cad-11e9-8431-0242ac140003
+                            asset: illustration
+                            name: BRAIN STRUCTURE Nervous System
+                            slug: brain-structure-nervous-system-1715915
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/brain-structure-nervous-system-1715915-1460154.png'
+                            color_codes:
+                              - decimal_color: 9225276
+                                color_id: 644
+                          - id: 1496408
+                            uuid: 70dcc480-adfe-11e9-8be6-0242ac140003
+                            asset: illustration
+                            name: TROPICAL FRUIT Summer Seamless Pattern
+                            slug: tropical-fruit-summer-seamless-pattern-1758817
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/tropical-fruit-summer-seamless-pattern-1758817-1496408.png'
+                            color_codes:
+                              - decimal_color: 13673914
+                                color_id: 1043
+                          - id: 1499456
+                            uuid: fa6fd600-af70-11e9-a26a-0242ac140003
+                            asset: illustration
+                            name: ROCKET GIRL Cartoon Space Princess
+                            slug: rocket-girl-cartoon-space-princess-1757781
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/rocket-girl-cartoon-space-princess-1757781-1499456.png'
+                            color_codes:
+                              - decimal_color: 9930968
+                                color_id: 629
+                          - id: 1499461
+                            uuid: 66914aa0-af71-11e9-bd60-0242ac140003
+                            asset: illustration
+                            name: RED WHITE Wedding Floral Golden Frame
+                            slug: red-white-wedding-floral-golden-frame-1757778
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/red-white-wedding-floral-golden-frame-1757778-1499461.png'
+                            color_codes:
+                              - decimal_color: 14541530
+                                color_id: 1185
+                          - id: 1458727
+                            uuid: 7f4f34c0-999b-11e9-887f-0242ac140003
+                            asset: illustration
+                            name: BLUE ROSE PATTERN
+                            slug: blue-rose-pattern-1713480
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/blue-rose-pattern-1713480-1458727.png'
+                            color_codes:
+                              - decimal_color: 13691632
+                                color_id: 1091
+                          - id: 1499502
+                            uuid: 202915e0-af73-11e9-a792-0242ac140003
+                            asset: illustration
+                            name: SKY BLUE OWL Felt Sleeping Design
+                            slug: sky-blue-owl-felt-sleeping-design-1757835
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/sky-blue-owl-felt-sleeping-design-1757835-1499502.png'
+                            color_codes:
+                              - decimal_color: 11854835
+                                color_id: 772
+                          - id: 1480081
+                            uuid: cb729bd0-a7b1-11e9-8d19-0242ac140003
+                            asset: illustration
+                            name: Baby and fox with flower wreath
+                            slug: baby-and-fox-with-flower-wreath-1742726
+                            price: 5
+                            _score: 1
+                            urls:
+                              thumb: 'https://cdni.iconscoutmails.com/illustration/premium/thumb/baby-and-fox-with-flower-wreath-1742726-1480081.png'
+                            color_codes:
+                              - decimal_color: 15197913
+                                color_id: 1173
+                        first_page_url: '/v2/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&page=1'
+                        from: 1
+                        last_page: 1075
+                        last_page_url: '/v2/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&page=1075'
+                        next_page_url: '/v2/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&page=2'
+                        path: /v2/search
+                        per_page: 10
+                        prev_page_url: null
+                        to: 10
+                        total: 10747
+                    meta:
+                      total_time: 97.9
+                      db_query_time: 2.78
+                      db_query_count: 2
                     elements: null
                     message: null
       operationId: v2.search
       parameters:
         - schema:
             type: string
+            example: avatar
           in: query
           name: query
           required: true
@@ -407,7 +539,6 @@ paths:
             uniqueItems: true
           in: query
           name: 'formats[]'
-          description: ''
         - schema:
             type: string
             default: relevant
@@ -418,18 +549,35 @@ paths:
               - color
           in: query
           name: sort
+          description: relevant
         - schema:
-            type: boolean
-            default: 'false'
+            type: array
+            items:
+              type: string
+              enum:
+                - flat
+                - line
+                - sticker
+                - colored-outline
+                - glyph
+                - isometric
+                - doodle
+                - gradient
+                - dualtone
+                - rounded
+            uniqueItems: true
           in: query
-          name: quality
+          name: 'styles[]'
+          description: Only applicable when asset filter is icon.
         - schema:
             type: integer
           in: header
           name: Client-ID
           description: The client_id is a public identifier for apps.
           required: true
-      description: search any assets
+      description: |-
+        Search for icons, illustrations or photos by query string and filter parameters.
+        If you need any type of special search filter (i.e category filter like user-interface or designer filter like iconscout) then let us know.
     parameters: []
   '/v2/items/{slug}':
     parameters:
@@ -647,7 +795,8 @@ paths:
         required: true
     post:
       summary: Item Download
-      tags: []
+      tags:
+        - Download
       responses:
         '200':
           description: OK
@@ -662,14 +811,14 @@ paths:
                     status: success
                     response:
                       download:
-                        url: 'https://s3.amazonaws.com/cdn.iconscout.com/icon/free/svg/1813802.svg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4VMJAKC54WWWCYMY%2F20200305%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200305T131401Z&X-Amz-SignedHeaders=host&X-Amz-Expires=259200&X-Amz-Signature=3aac4e4087313d419b3f97c725e4d4df2c8ac42df291e72fcdeceaa4e839a5df'
-                        name: Piggy Bank
-                        download_url: 'https://us-central1-iconscout-1539.cloudfunctions.net/download?name=Piggy Bank&download=1&url=https%3A%2F%2Fs3.amazonaws.com%2Fcdn.iconscout.com%2Ficon%2Ffree%2Fsvg%2F1813802.svg%3FX-Amz-Content-Sha256%3DUNSIGNED-PAYLOAD%26X-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIA4VMJAKC54WWWCYMY%252F20200305%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20200305T131401Z%26X-Amz-SignedHeaders%3Dhost%26X-Amz-Expires%3D259200%26X-Amz-Signature%3D3aac4e4087313d419b3f97c725e4d4df2c8ac42df291e72fcdeceaa4e839a5df'
+                        url: 'https://s3.amazonaws.com/cdn.iconscout.com/icon/free/svg/461593.svg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4VMJAKC54WWWCYMY%2F20200801%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200801T023149Z&X-Amz-SignedHeaders=host&X-Amz-Expires=259200&X-Amz-Signature=18abc131db4e933c53a1954855f6edcd2dfd10645949859fdeb75bd034e83a48'
+                        name: Clock
+                        download_url: 'https://us-central1-iconscout-1539.cloudfunctions.net/download?name=clock&download=1&url=https%3A%2F%2Fs3.amazonaws.com%2Fcdn.iconscout.com%2Ficon%2Ffree%2Fsvg%2F461593.svg%3FX-Amz-Content-Sha256%3DUNSIGNED-PAYLOAD%26X-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIA4VMJAKC54WWWCYMY%252F20200801%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20200801T023149Z%26X-Amz-SignedHeaders%3Dhost%26X-Amz-Expires%3D259200%26X-Amz-Signature%3D18abc131db4e933c53a1954855f6edcd2dfd10645949859fdeb75bd034e83a48'
                         download_license_uuid: null
                       message: item.download.success
                     meta:
-                      total_time: 66.5
-                      db_query_time: 28.28
+                      total_time: 97.59
+                      db_query_time: 30.01
                       db_query_count: 8
                     elements: null
                     message: null
@@ -699,7 +848,7 @@ paths:
                 value:
                   format: svg
         description: Here you need to pass `format` of item to download (available from fetch item api)
-      description: Get download link of particular item
+      description: Get download link of item
 components:
   schemas: {}
   securitySchemes:
