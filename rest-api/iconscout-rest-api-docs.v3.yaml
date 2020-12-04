@@ -198,149 +198,6 @@ paths:
                       db_query_count: 2
                     elements: null
                     message: null
-                Photo Results:
-                  value:
-                    status: success
-                    response:
-                      items:
-                        current_page: 1
-                        data:
-                          - id: 1801630
-                            uuid: ad86d940-5a1d-11ea-bb42-0242ac140003
-                            asset: photo
-                            name: Background  wood board tilt angle
-                            slug: background-wood-board-tilt-angle-2141510
-                            price: 5
-                            _score: 1
-                            urls:
-                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/background-wood-board-tilt-angle-2141510-1801630.jpg'
-                            color_codes:
-                              - decimal_color: 15260628
-                                color_id: 1190
-                          - id: 1801631
-                            uuid: ad86e740-5a1d-11ea-b83a-0242ac140003
-                            asset: photo
-                            name: Background  wood board tilt angle
-                            slug: background-wood-board-tilt-angle-2141511
-                            price: 5
-                            _score: 1
-                            urls:
-                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/background-wood-board-tilt-angle-2141511-1801631.jpg'
-                            color_codes:
-                              - decimal_color: 11244947
-                                color_id: 849
-                          - id: 1801633
-                            uuid: ad870450-5a1d-11ea-a296-0242ac140003
-                            asset: photo
-                            name: Wooden board background
-                            slug: wooden-board-background-2141513
-                            price: 5
-                            _score: 1
-                            urls:
-                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/wooden-board-background-2141513-1801633.jpg'
-                            color_codes:
-                              - decimal_color: 11971486
-                                color_id: 903
-                          - id: 1801634
-                            uuid: ad8713a0-5a1d-11ea-828e-0242ac140003
-                            asset: photo
-                            name: Wooden board background
-                            slug: wooden-board-background-2141514
-                            price: 5
-                            _score: 1
-                            urls:
-                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/wooden-board-background-2141514-1801634.jpg'
-                            color_codes:
-                              - decimal_color: 11707796
-                                color_id: 820
-                          - id: 1801635
-                            uuid: ad872170-5a1d-11ea-88b9-0242ac140003
-                            asset: photo
-                            name: Wooden board background
-                            slug: wooden-board-background-2141515
-                            price: 5
-                            _score: 1
-                            urls:
-                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/wooden-board-background-2141515-1801635.jpg'
-                            color_codes:
-                              - decimal_color: 11445141
-                                color_id: 820
-                          - id: 1801637
-                            uuid: ad873d60-5a1d-11ea-bf66-0242ac140003
-                            asset: photo
-                            name: Dark wood floor pattern
-                            slug: dark-wood-floor-pattern-2141517
-                            price: 5
-                            _score: 1
-                            urls:
-                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141517-1801637.jpg'
-                            color_codes:
-                              - decimal_color: 10522755
-                                color_id: 724
-                          - id: 1801639
-                            uuid: ad875920-5a1d-11ea-934e-0242ac140003
-                            asset: photo
-                            name: Dark wood floor pattern
-                            slug: dark-wood-floor-pattern-2141519
-                            price: 5
-                            _score: 1
-                            urls:
-                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141519-1801639.jpg'
-                            color_codes:
-                              - decimal_color: 8739411
-                                color_id: 564
-                          - id: 1801640
-                            uuid: ad876870-5a1d-11ea-9bdb-0242ac140003
-                            asset: photo
-                            name: Dark wood floor pattern
-                            slug: dark-wood-floor-pattern-2141520
-                            price: 5
-                            _score: 1
-                            urls:
-                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141520-1801640.jpg'
-                            color_codes:
-                              - decimal_color: 8808020
-                                color_id: 624
-                          - id: 1801641
-                            uuid: ad877690-5a1d-11ea-9625-0242ac140003
-                            asset: photo
-                            name: Dark wood floor pattern
-                            slug: dark-wood-floor-pattern-2141521
-                            price: 5
-                            _score: 1
-                            urls:
-                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141521-1801641.jpg'
-                            color_codes:
-                              - decimal_color: 9464151
-                                color_id: 699
-                          - id: 1801647
-                            uuid: ad87cb00-5a1d-11ea-958f-0242ac140003
-                            asset: photo
-                            name: Dark wood floor pattern
-                            slug: dark-wood-floor-pattern-2141527
-                            price: 5
-                            _score: 1
-                            urls:
-                              thumb: 'https://cdnp.iconscoutmails.com/photo/premium/thumb/dark-wood-floor-pattern-2141527-1801647.jpg'
-                            color_codes:
-                              - decimal_color: 9720880
-                                color_id: 671
-                        first_page_url: '/v3/search?query=%2A&product_type=item&asset=photo&per_page=10&sort=relevant&quality=0&page=1'
-                        from: 1
-                        last_page: 13899
-                        last_page_url: '/v3/search?query=%2A&product_type=item&asset=photo&per_page=10&sort=relevant&quality=0&page=13899'
-                        next_page_url: '/v3/search?query=%2A&product_type=item&asset=photo&per_page=10&sort=relevant&quality=0&page=2'
-                        path: /v3/search
-                        per_page: 10
-                        prev_page_url: null
-                        to: 10
-                        total: 138985
-                    meta:
-                      total_time: 160.84
-                      db_query_time: 8.03
-                      db_query_count: 2
-                    elements: null
-                    message: null
                 Illustration Results:
                   value:
                     status: success
@@ -505,7 +362,6 @@ paths:
             enum:
               - icon
               - illustration
-              - photo
             default: icon
           in: query
           name: asset
@@ -570,8 +426,8 @@ paths:
           name: 'styles[]'
           description: Only applicable when asset filter is icon.
       description: |-
-        Search for icons, illustrations or photos by query string and filter parameters.
-        If you need any type of special search filter (i.e category filter like user-interface or designer filter like iconscout) then let us know.
+        Search for 2.1 Million+ Icons or 20,000+ Illustrations by query string and filter parameters.
+        If you need any type of special search filter (i.e category filter like user-interface or designer filter like iconscout/unicons) then let us know.
     parameters: []
   '/v3/items/{uuid}/api-download':
     parameters:
