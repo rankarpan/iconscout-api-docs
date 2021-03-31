@@ -32,10 +32,9 @@ paths:
           content:
             application/json:
               schema:
-                type: array
+                type: object
                 uniqueItems: false
-                items:
-                  type: object
+                items: {}
               examples:
                 Icon Results:
                   value:
@@ -182,11 +181,11 @@ paths:
                             color_codes:
                               - decimal_color: 0
                                 color_id: 1
-                        first_page_url: '/v3/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&page=1'
+                        first_page_url: /v3/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&page=1
                         from: 1
                         last_page: 185812
-                        last_page_url: '/v3/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&page=185812'
-                        next_page_url: '/v3/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&page=2'
+                        last_page_url: /v3/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&page=185812
+                        next_page_url: /v3/search?query=%2A&product_type=item&asset=icon&per_page=10&sort=relevant&quality=0&page=2
                         path: /v3/search
                         per_page: 10
                         prev_page_url: null
@@ -325,11 +324,11 @@ paths:
                             color_codes:
                               - decimal_color: 15197913
                                 color_id: 1173
-                        first_page_url: '/v3/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&page=1'
+                        first_page_url: /v3/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&page=1
                         from: 1
                         last_page: 1075
-                        last_page_url: '/v3/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&page=1075'
-                        next_page_url: '/v3/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&page=2'
+                        last_page_url: /v3/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&page=1075
+                        next_page_url: /v3/search?query=%2A&product_type=item&asset=illustration&per_page=10&sort=relevant&quality=0&page=2
                         path: /v3/search
                         per_page: 10
                         prev_page_url: null
@@ -425,8 +424,14 @@ paths:
           in: query
           name: 'styles[]'
           description: Only applicable when asset filter is icon.
+        - schema:
+            type: number
+          in: header
+          name: Client-ID
+          description: 'You can create new Apps from here: https://iconscout.com/developers'
+          required: true
       description: |-
-        Search for 2.1 Million+ Icons or 20,000+ Illustrations by query string and filter parameters.
+        Search for 2.5 Million+ Icons or 25,000+ Illustrations by query string and filter parameters.
         If you need any type of special search filter (i.e category filter like user-interface or designer filter like iconscout/unicons) then let us know.
     parameters: []
   '/v3/items/{uuid}/api-download':
@@ -454,31 +459,43 @@ paths:
                     status: success
                     response:
                       download:
-                        url: 'https://s3.amazonaws.com/cdn.iconscout.com/icon/free/svg/461593.svg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4VMJAKC54WWWCYMY%2F20200801%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200801T023149Z&X-Amz-SignedHeaders=host&X-Amz-Expires=259200&X-Amz-Signature=18abc131db4e933c53a1954855f6edcd2dfd10645949859fdeb75bd034e83a48'
-                        name: Clock
-                        download_url: 'https://us-central1-iconscout-1539.cloudfunctions.net/download?name=clock&download=1&url=https%3A%2F%2Fs3.amazonaws.com%2Fcdn.iconscout.com%2Ficon%2Ffree%2Fsvg%2F461593.svg%3FX-Amz-Content-Sha256%3DUNSIGNED-PAYLOAD%26X-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIA4VMJAKC54WWWCYMY%252F20200801%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20200801T023149Z%26X-Amz-SignedHeaders%3Dhost%26X-Amz-Expires%3D259200%26X-Amz-Signature%3D18abc131db4e933c53a1954855f6edcd2dfd10645949859fdeb75bd034e83a48'
+                        url: 'https://duce5lj2f2sxj.cloudfront.net/icon/free/svg/1.svg?Expires=1617408000&Signature=qwXRzp4POqfp2gRalGahOKmIMitXsDnal7dalpLYW-QyepYZBeFNIdhN5JX~A~h4b03Z13zJW0EVSdMBPRnnfLMZAXsc3xT1sDFdptO7vGQGTueo23GoeTo1Wx6VFqo9CJc~g5reVBwxktQq6GrmkcOGIH0aQpkRoI25T5o8ntMCiX35sSs8JbyQW9WgKn3Yv91tGiQmXFWzNUvjeXp5yyFseuYNiE2JY9LPhINo3Cits6eD1Lh~myfie8sJRhbEoe9W4DL3wQAv6izonYsvCUs7H2xhfLdEjRpbqFBbEInP3JifJSiaR5QWSd~VC51xswmHwiwEIJUsGnaurBSj-A__&Key-Pair-Id=APKAIONEDRCDZGBCR6PA'
+                        name: Insurance
+                        download_url: 'https://download.dev.services.iconscout.com/download?name=insurance&download=1&url=https%3A%2F%2Fduce5lj2f2sxj.cloudfront.net%2Ficon%2Ffree%2Fsvg%2F1.svg%3FExpires%3D1617408000%26Signature%3DqwXRzp4POqfp2gRalGahOKmIMitXsDnal7dalpLYW-QyepYZBeFNIdhN5JX%7EA%7Eh4b03Z13zJW0EVSdMBPRnnfLMZAXsc3xT1sDFdptO7vGQGTueo23GoeTo1Wx6VFqo9CJc%7Eg5reVBwxktQq6GrmkcOGIH0aQpkRoI25T5o8ntMCiX35sSs8JbyQW9WgKn3Yv91tGiQmXFWzNUvjeXp5yyFseuYNiE2JY9LPhINo3Cits6eD1Lh%7Emyfie8sJRhbEoe9W4DL3wQAv6izonYsvCUs7H2xhfLdEjRpbqFBbEInP3JifJSiaR5QWSd%7EVC51xswmHwiwEIJUsGnaurBSj-A__%26Key-Pair-Id%3DAPKAIONEDRCDZGBCR6PA'
                         download_license_uuid: null
-                      message: item.download.success
+                      message: You have downloaded Insurance icon successfully.
                     meta:
-                      total_time: 97.59
-                      db_query_time: 30.01
+                      total_time: 99.85
+                      db_query_time: 20.96
                       db_query_count: 8
                     elements: null
                     message: null
       operationId: v3.items.api-download
       parameters:
         - schema:
+            type: number
+          in: header
+          name: Client-ID
+          required: true
+          description: 'You can create new Apps from here: https://iconscout.com/developers'
+        - schema:
             type: string
           in: header
           name: Client-Secret
           required: true
-          description: Drop mail on arpan@iconscout.com to get new Client-Secret.
+          description: 'You can create new Apps from here: https://iconscout.com/developers'
       requestBody:
         content:
           application/json:
             schema:
+              description: ''
               type: object
-              properties: {}
+              properties:
+                format:
+                  type: string
+                  minLength: 1
+              required:
+                - format
             examples:
               Item Download Format:
                 value:
@@ -487,11 +504,4 @@ paths:
       description: Get download link of item
 components:
   schemas: {}
-  securitySchemes:
-    Client-ID:
-      name: Client-ID
-      type: apiKey
-      in: header
-      description: The client_id is a public identifier for apps.
-security:
-  - Client-ID: []
+  securitySchemes: {}
